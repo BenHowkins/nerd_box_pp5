@@ -13,8 +13,3 @@ As a **Role** I can **Capability** so that **Recieved Benefit**
 1.
 2.
 3.
-
-## Tasks:
-1.
-2.
-3.
