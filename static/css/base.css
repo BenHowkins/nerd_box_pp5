@@ -56,6 +56,9 @@ body {
     border: 1px solid black !important;
 }
 
+.bg-red {
+    background: #F35B53 !important;
+}
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
