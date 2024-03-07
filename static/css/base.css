@@ -3,9 +3,9 @@ html {
 }
 
 body {
-    background: url('/media/nerdbox.jpg') no-repeat center center fixed;
+    background: url('/media/mysterybox.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: calc(100vh - 164px);
+    height: calc(100vh - 166px);
     font-family: "Roboto Condensed", sans-serif;
     color: red;
 }
@@ -27,20 +27,12 @@ body {
     width: fit-content;
 }
 
-.shop-now-button {
-    background: #F35B53;
-    color: black;
-    min-width: 260px;
-}
 
 .btn-red {
     background: #F35B53;
     color: black;
 }
 
-.shop-now-button:hover,
-.shop-now-button:active,
-.shop-now-button:focus,
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
@@ -79,6 +71,6 @@ body {
     }
 
     .header-container {
-        padding-top: 164px;
+        padding-top: 166px;
     }
 }
