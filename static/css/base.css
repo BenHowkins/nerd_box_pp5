@@ -4,7 +4,7 @@ html {
 
 body {
     background: url('/media/mysterybox.jpg') no-repeat center center fixed;
-    background-size: cover;
+    background-size: contain;
     height: calc(100vh - 166px);
     font-family: "Roboto Condensed", sans-serif;
     color: red;
@@ -27,6 +27,9 @@ body {
     width: fit-content;
 }
 
+.bg-color {
+    background-color: aqua;
+}
 
 .btn-red {
     background: #F35B53;
@@ -50,6 +53,20 @@ body {
 
 .bg-red {
     background: #F35B53 !important;
+}
+
+.dropdown-menu {
+    color: red;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: wheat;
+    z-index: -1;
 }
 /* -------------------------------- Media Queries */
 
