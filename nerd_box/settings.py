@@ -27,7 +27,8 @@ SECRET_KEY = 'django-insecure-+!yuz=tymo1p7a2ay0lwi@9wk+w%bzk+fmph-69)8!5-cmz65%
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '8000-benhowkins-nerdboxpp5-49mhp2nsrj4.ws-eu108.gitpod.io'
+    '8000-benhowkins-nerdboxpp5-49mhp2nsrj4.ws-eu108.gitpod.io',
+    '8000-benhowkins-nerdboxpp5-49mhp2nsrj4.ws-eu110.gitpod.io'
 ]
 
 
