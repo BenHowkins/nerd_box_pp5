@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background: url('/media/mysterybox.jpg') no-repeat center center fixed;
+    background: url('/media/mysterybox.jpg') no-repeat center center fixed, #F35B53;
     background-size: contain;
     height: calc(100vh - 166px);
     font-family: "Roboto Condensed", sans-serif;

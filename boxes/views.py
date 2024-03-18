@@ -16,12 +16,12 @@ def all_products(request):
 
     return render(request, 'products/products.html', context)
 
-def product_detail(request, product_id):
+def product_detail(request, product_sku):
     """"
     A view to show all boxes
     """
     
-    product = get_object_or_404(Product, pk=product_id)
+    product = get_object_or_404(Product, pk=product_sku)
 
     context = {
         'product': product,
