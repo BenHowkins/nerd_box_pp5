@@ -5,10 +5,10 @@
                 All Current Boxes
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-current-boxes-link">
-                <a href="" class="dropdown-item">Anime Box</a>
-                <a href="" class="dropdown-item">Combo Box</a>
-                <a href="" class="dropdown-item">Gaming Box</a>
-                <a href="" class="dropdown-item">Movie Box</a>
+                <a href="{% url 'products' %}?category=anime_box" class="dropdown-item">Anime Box</a>
+                <a href="{% url 'products' %}?category=combo_box" class="dropdown-item">Combo Box</a>
+                <a href="{% url 'products' %}?category=gaming_box" class="dropdown-item">Gaming Box</a>
+                <a href="{% url 'products' %}?category=movie_box" class="dropdown-item">Movie Box</a>
                 <a href="{% url 'products' %}" class="dropdown-item">All Boxes</a>
             </div>
         </li>

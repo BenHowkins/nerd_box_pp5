@@ -5,7 +5,7 @@ html {
 body {
     background: url('/media/mysterybox.jpg') no-repeat center center fixed, #F35B53;
     background-size: contain;
-    height: calc(100vh - 166px);
+    height: calc(100vh - 500px);
     font-family: "Roboto Condensed", sans-serif;
     color: red;
 }
@@ -41,6 +41,10 @@ body {
 .btn-black:focus {
     background: red;
     color: black;
+}
+
+.list_inline_item {
+    color: #F35B53;
 }
 
 .text-red {
