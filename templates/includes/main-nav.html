@@ -13,11 +13,11 @@
             </div>
         </li>
         <li class="nav-item dropdown border-black bg-white">
-            <a class="logo-font font-weight-bold nav-link text-red mr-5" href="#" id="all-current-boxes-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-red mr-5" href="#" id="all-past-boxes-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Past Boxes
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-current-boxes-link">
-                <a href="{% url 'products' %}?category=past_anime_box" class="dropdown-item">Past Anime Boxes</a>
+                <a href="{% url 'products' %}?category=past_anime_boxes" class="dropdown-item">Past Anime Boxes</a>
                 <a href="{% url 'products' %}?category=past_gaming_boxes" class="dropdown-item">Past Gaming Boxes</a>
                 <a href="{% url 'products' %}?category=past_movie_boxes" class="dropdown-item">Past Movie Boxes</a>
                 <a href="{% url 'products' %}?category=past_anime_boxes,past_gaming_boxes,past_movie_boxes" class="dropdown-item">All Past Boxes</a>
