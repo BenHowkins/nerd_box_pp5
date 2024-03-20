@@ -23,11 +23,12 @@ def all_products(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request,"You Didn't Search Anything. Let's Try Again!")
+                messages.error(request,
+                               ("You didn't search anything. Let's try again!"))
                 return redirect(reverse('home'))
-        
-        queries = Q(name__icontains=query) | Q(description__icontains=query)
-        products = products.filter(queries)
+
+            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            products = products.filter(queries)
 
     context = {
         'products': products,
