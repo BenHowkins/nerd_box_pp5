@@ -36,6 +36,12 @@ body {
     color: black;
 }
 
+.btn-outline-black {
+    background: #F35B53;
+    color: black;
+    border: 1px solid black;
+}
+
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
