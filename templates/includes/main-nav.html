@@ -5,11 +5,11 @@
                 All Current Boxes
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-current-boxes-link">
-                <a href="{% url 'products' %}?category=anime_box" class="dropdown-item">Anime Box</a>
-                <a href="{% url 'products' %}?category=combo_box" class="dropdown-item">Combo Box</a>
-                <a href="{% url 'products' %}?category=gaming_box" class="dropdown-item">Gaming Box</a>
-                <a href="{% url 'products' %}?category=movie_box" class="dropdown-item">Movie Box</a>
-                <a href="{% url 'products' %}?category=anime_box,combo_box,gaming_box,movie_box" class="dropdown-item">All Current Boxes</a>
+                <a href="{% url 'products' %}?category=anime_box" class="dropdown-item text-red">Anime Box</a>
+                <a href="{% url 'products' %}?category=combo_box" class="dropdown-item text-red">Combo Box</a>
+                <a href="{% url 'products' %}?category=gaming_box" class="dropdown-item text-red">Gaming Box</a>
+                <a href="{% url 'products' %}?category=movie_box" class="dropdown-item text-red">Movie Box</a>
+                <a href="{% url 'products' %}?category=anime_box,combo_box,gaming_box,movie_box" class="dropdown-item text-red">All Current Boxes</a>
             </div>
         </li>
         <li class="nav-item dropdown border-black bg-white">
@@ -17,10 +17,10 @@
                 Past Boxes
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-current-boxes-link">
-                <a href="{% url 'products' %}?category=past_anime_boxes" class="dropdown-item">Past Anime Boxes</a>
-                <a href="{% url 'products' %}?category=past_gaming_boxes" class="dropdown-item">Past Gaming Boxes</a>
-                <a href="{% url 'products' %}?category=past_movie_boxes" class="dropdown-item">Past Movie Boxes</a>
-                <a href="{% url 'products' %}?category=past_anime_boxes,past_gaming_boxes,past_movie_boxes" class="dropdown-item">All Past Boxes</a>
+                <a href="{% url 'products' %}?category=past_anime_boxes" class="dropdown-item text-red">Past Anime Boxes</a>
+                <a href="{% url 'products' %}?category=past_gaming_boxes" class="dropdown-item text-red">Past Gaming Boxes</a>
+                <a href="{% url 'products' %}?category=past_movie_boxes" class="dropdown-item text-red">Past Movie Boxes</a>
+                <a href="{% url 'products' %}?category=past_anime_boxes,past_gaming_boxes,past_movie_boxes" class="dropdown-item text-red">All Past Boxes</a>
             </div>
         </li>
     </ul>
