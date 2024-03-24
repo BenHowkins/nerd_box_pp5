@@ -1,0 +1,1 @@
+web: gunicorn nerd_box.wsgi:application

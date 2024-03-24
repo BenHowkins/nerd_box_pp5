@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 import os
+import dj_database_url
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -28,7 +29,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '8000-benhowkins-nerdboxpp5-49mhp2nsrj4.ws-eu108.gitpod.io',
-    '8000-benhowkins-nerdboxpp5-49mhp2nsrj4.ws-eu110.gitpod.io'
+    '8000-benhowkins-nerdboxpp5-49mhp2nsrj4.ws-eu110.gitpod.io',
+    'nerd-box.herokuapp.com',
+    'localhost',
 ]
 
 
@@ -121,12 +124,19 @@ WSGI_APPLICATION = 'nerd_box.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
+    
+    
 
 
 # Password validation
