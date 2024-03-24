@@ -30,7 +30,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     '8000-benhowkins-nerdboxpp5-49mhp2nsrj4.ws-eu108.gitpod.io',
     '8000-benhowkins-nerdboxpp5-49mhp2nsrj4.ws-eu110.gitpod.io',
-    'nerd-box.herokuapp.com',
+    'nerd-box-cc697c19580a.herokuapp.com',
     'localhost',
 ]
 
