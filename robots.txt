@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /accounts/
+Sitemap: https://nerd-box-cc697c19580a.herokuapp.com/siemap.xml
