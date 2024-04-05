@@ -89,6 +89,20 @@ input[name='q']::placeholder {
     color: #aab7c4;
 }
 
+.left-section {
+    text-align: left;
+    float: left;
+}
+
+.right-section {
+    text-align: right;
+    float: right;
+}
+
+.theme-box {
+    padding: 5px;
+    text-align: center;
+}
 
 /* ------------------------------- bootstrap toasts */
 
