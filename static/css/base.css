@@ -92,11 +92,13 @@ input[name='q']::placeholder {
 .left-section {
     text-align: left;
     float: left;
+    margin-left: 10px;
 }
 
 .right-section {
     text-align: right;
     float: right;
+    margin-right: 10px;
 }
 
 .theme-box {
