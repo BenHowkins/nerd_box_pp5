@@ -34,7 +34,6 @@ ALLOWED_HOSTS = [
     'localhost',
 ]
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -135,8 +134,6 @@ else:
         }
     }
     
-    
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
