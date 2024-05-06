@@ -83,7 +83,11 @@
                             aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
                                 <div><i class="fas fa-user fa-lg"></i></div>
+                                {% if request.user.is_authenticated %}
+                                <p class="my-0">{{ user }}</p>
+                                {% else %}
                                 <p class="my-0">My Account</p>
+                                {% endif %}
                             </div>
                         </a>
                         <div class="dropdown-menu border-0" aria-labelledby="user-options-base">
@@ -157,8 +161,8 @@
         <div class="container">
             <section class="footer">
                 <div class="row">
-                    <div class="col-12 page-header">
-                        <h2 class="logo-font text-red">Everything Social</h2>
+                    <div class="col-12 header">
+                        <h2 class="logo-font text-center text-red">Everything Social</h2>
                         <hr>
                     </div>
                 </div>

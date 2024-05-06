@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background: url('/media/mysterybox.jpg') no-repeat center center fixed, #F35B53;
+    background: #F35B53;
     background-size: contain;
     height: calc(100vh - 500px);
     font-family: "Roboto Condensed", sans-serif;
@@ -92,6 +92,7 @@ input[name='q']::placeholder {
 .left-section {
     text-align: left;
     float: left;
+    margin-top: 10px;
     margin-left: 10px;
 }
 
