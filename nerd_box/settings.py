@@ -30,6 +30,12 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+# Paste CSRF here
+CSRF_TRUSTED_ORIGINS = [
+    'https://8000-benhowkins-nerdboxpp5-nvxkw2rf1yg.ws-eu111.gitpod.io',
+    'https://nerd-box-cc697c19580a.herokuapp.com',
+    ]
+
 ALLOWED_HOSTS = [
     "8000-benhowkins-nerdboxpp5-nvxkw2rf1yg.ws-eu111.gitpod.io",
     "nerd-box-cc697c19580a.herokuapp.com",
