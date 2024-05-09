@@ -465,28 +465,49 @@ The following manual tests were carried out:
 TEST       | DESIRED RESULT          | PASS/FAIL |
 ---------- | ----------------------- | --------- |
 Logo | When the logo is clicked, the user is brought back to the home page | PASS
-Mobile menu | On mobile devices, a burger menu is used to display nav links | PASS
+Mobile menu | On mobile devices, a burger menu is used to display three nav links: a link back to the home page and two dropdown menus to display the categories of the current and past boxes. There is also icons for the search bar, my account and bag links next to the burger menu | PASS
+Search bar | Inputting information into the search bar brings up a page with relivant search results | PASS
+My Account link | Brings up a mini drop menu with a number of links depending on if the user is signed in or out or is a superuser | PASS
 Register nav link | Brings the user to the signup page | PASS
 Login nav link | Brings the user to the login page | PASS
 Logout nav link | Brings the user to the logout page | PASS
-Footer links | When clicked, footer links open in a new browser window | PASS
+My Profile link | Brings the user to their profile page | PASS
+Product Management nav link | If the user is a SuperUser it brings user to the product management page | PASS
+Bag link | Brings the user to the bag page | PASS
+All Current Boxes dropdown link | Brings up a dropdown menu containing links to each categories of the current box plus a link that displays all available current boxes | PASS
+Anime Box link | Brings the user to a page displaying all available boxes in the Anime Box category | PASS
+Combo Box link | Brings the user to a page displaying all available boxes in the Combo Box category | PASS
+Gaming Box link | Brings the user to a page displaying all available boxes in the Gaming Box category | PASS
+Movie Box link | Brings the user to a page displaying all available boxes in the Movie Box category | PASS
+All Current Boxes link | Brings the user to a page displaying all available current boxes | PASS
+Past Boxes dropdown link | Brings up a dropdown menu containing links to each categories of the past box plus a link that displays all available past boxes | PASS
+Past Anime Box link | Brings the user to a page displaying all available boxes in the Past Anime Box category | PASS
+Past Gaming Box link | Brings the user to a page displaying all available boxes in the Past Gaming Box category | PASS
+Past Movie Box link | Brings the user to a page displaying all available boxes in the Past Movie Box category | PASS
+All Past Boxes link | Brings the user to a page displaying all available past boxes | PASS
+Footer link | When clicked, the facebook link in the footer opens to the facebook page in a new browser window | PASS
+Mailchimp link | When an email address is input and submitted in the link a message confirming the subscription to the news letter | PASS
 
 #### Home Page: index.html
 TEST       | DESIRED RESULT          | PASS/FAIL |
 ---------- | ----------------------- | --------- |
-Post Card | A card for each post is visible containing: Feature image, Author's Name, Post's Title, Post Excerpt, Published Date, Number Of LIkes | PASS
-Post Card Link | When the title of the card is clicked, the user is brought to the post detail page for the post | PASS
-Number Of Likes | The number of likes on the card should be the same as that on the post detail page | PASS
-Page Pagination | The post cards should be in rows of 3 posts per row and should have page navigation appear when more than 6 posts are visable | PASS
+Information Cards | A number of card each containing information about the store with key information such as categories and the store name highlighted in bold to emphasize them | PASS
+Themes Title Box | A single page length white box containing text to state that the below text is the current available themes for each category | PASS
+Theme boxes | Three boxes should be at the base of the page above the footer stating the current themes of each box with a small 1-2 line hook for the boxes | PASS
 
-#### Add Post Page: add_post.html
+#### Products Page: products.html
 TEST       | DESIRED RESULT          | PASS/FAIL |
 ---------- | ----------------------- | --------- |
-Register Message | The user should be welcomed with a message saying welcome back to the page and told to fill out the form below if they wish to leavee a post of their own | PASS
-Input Form | There should be a labeled form for the user to input a Title for the post, a Slug name, select the Author of the post, select an Image, create an Exerpt decription and the post Content itself with the Title, Slug, Author and Content all being starred to indicate they are authorised fields  | PASS
-Confirmation Button | A button should be visable below the message labelled "Submit" which confirms submission of the review | PASS
-Data Input Autherisation | After the submit button is pushed the site will check all the required fields have data entered in them and also check the data input against the database to see there is no repeated Titles or Slugs being used. If either of these things happen a error message will appear under the offending field saying either that this field is required or this Title or Slug has been used and to select another one  | PASS
-Site Redirection | After pushing the submit button with correct details, the user should be redirected back to the home page | PASS
+Page Title | The user should see a title at the top of the page below the header stating that this is the Products page | PASS
+Category Boxes | There should be below the title boxes with the names of the caegories the user selected to see | PASS
+Individual Category Box Selection | If more than one was selected then clicking a box will change the product page to show just that category | PASS
+Item Cards | A card for each box is visible containing: feature image, name , price and category | PASS
+Superuser Extra Item Card Options | If the user is a superuser then there should be two extra option on the item card, one is a link to the edit product page labelled Edit and the other deletes the item labelled Delete | PASS
+Edit Link | Clicking the link will take the superuser to the edit poduct page | PASS
+Delete Link | Clicking the link will delete the product from the store | PASS
+Display Grid | The available item cards for the category/ categories selected should be displayed in the rows containing no more than four cards per row | PASS
+Site Direction | Upon clicking on the feature image of an item, the user should be directed to the product details page for that product | PASS
+Page Up | At the base of the page below the last row of item cards but above the footer is an arrow which when pushed returns the user to the toop of the page | PASS
 
 #### Post Detail Page: post_detail.html
 TEST       | DESIRED RESULT          | PASS/FAIL |
@@ -501,36 +522,29 @@ Comment List | All approved comment should appear down the left side of the scre
 Comment Edit Button | A button should appear below any comment a logged in user has made named "Edit". This should take them to the comment edit page. This button should only appear on comments they have made | PASS
 Delete Comment Button | A button should appear below any comment a logged in user has made "Delete". This should take them to the comment delete page. This button should only appear on comments they have made | PASS
 
-#### Comment Edit Page: comment_edit.html
-TEST       | DESIRED RESULT          | PASS/FAIL |
----------- | ----------------------- | --------- |
-Edit Comment Message | The user should be welcomed with a personalised message containing their username stating that they can change their comment | PASS
-Comment Edit Box | A textbox should be visable, displaying the original message and allowing the user to make alterations | PASS
-Confirmation Button | A button should be visable below the textbox labelled "Update Comment" which confirms any changes made | PASS
-Site Redirection | After pushing the button the user should be redirected back to the home page | PASS
-
-#### Comment Delete Page: comment_delete.html
-TEST       | DESIRED RESULT          | PASS/FAIL |
----------- | ----------------------- | --------- |
-Edit Comment Message | The user should be welcomed with a personalised message containing their username stating that they are deleting their comment and this is unreversable | PASS
-Confirmation Button | A button should be visable below the message labelled "Delete Comment" which confirms deletion of the comment | PASS
-Site Redirection | After pushing the button the user should be redirected back to the home page | PASS
-
 #### Register Page: signup.html
 TEST       | DESIRED RESULT          | PASS/FAIL |
 ---------- | ----------------------- | --------- |
 Register Message | The user should be welcomed with a message saying welcome back to the page and told if they already have an account to log in with a link to the log in page or sign up below if they don't have an account | PASS
-Input Details | There should be labeled boxes for the user to input a username, an email address if they wish too and to input a password and another password field to confirm the password match. There is also a submit button to confirm entry of the details | PASS
-Input Autherisation | After the submit button is pushed the site will check the data input against the database. If the passwords match and the username is unique the user will be redirected to the home page. If the username is taken the user will be informed it has been taken and asked to pick another one. If the passwords don't match the user will be told they didn't match and asked to try again | PASS
-Site Redirection | After pushing the submit button with correct details, the user should be redirected back to the home page and a message should display stating they have signed in with their username | PASS
+Input Details | There should be labeled boxes for the user to input an email address and another to confirm it, a box for a username and a password and another password field to confirm the password match. There is also a submit button to confirm entry of the details | PASS
+Input Autherisation | After the submit button is pushed the site will check the data input against the database. If the passwords match and the username is unique the user will be redirected to another screen stating that an email has been sent to the provided address and they must click the link to confirm their account. If the username or email address is taken the user will be informed it has been taken and asked to pick another one. If the passwords don't match the user will be told they didn't match and asked to try again | PASS
+Site Redirection | After pushing the submit button with correct details, the user should be redirected bto another screen stating that an email has been sent to the provided address and they must click the link to confirm their account | PASS
+
+#### Account Confirm Page: email_confirm.html
+TEST       | DESIRED RESULT          | PASS/FAIL |
+---------- | ----------------------- | --------- |
+Conformation Message | The user should be welcomed with a message asking them to confirm that the email address provided is for the username provided | PASS
+Conformation Button | The user should have a button labelled confirm which when clicked will confirm the details, create the account and redirect the user to the login page | PASS
+Site Redirection | After pushing the button the user should be redirected back to the login page | PASS
 
 #### Login Page: login.html
 TEST       | DESIRED RESULT          | PASS/FAIL |
 ---------- | ----------------------- | --------- |
-Login Message | The user should be welcomed with a message saying welcome back and log in or sign up with a link to the register page if they don't have an account | PASS
-Input Details | There should be labeled boxes for the user's username and password and a submit button to confirm entry of the details | PASS
+Login Message | The user should be welcomed with a message saying if they don't have an account they need to sign up first with a link to the register page | PASS
+Input Details | There should be labeled boxes for the user's username or email and password and a submit button to confirm entry of the details | PASS
 Input Autherisation | After the submit button is pushed the site will check the data input against the database. If the data is correct the user is redirected back to the home page, if it is incorrect a message will appear stating that either the username and/ or password are incorrect and allow the user to try again | PASS
 Site Redirection | After pushing the submit button with correct details, the user should be redirected back to the home page and a message should display stating they have signed in with their username | PASS
+Home Button | Next to the Submit button there is a Home button which when clicked will return the user to the home page | PASS
 
 #### Logout Page: logout.html
 TEST       | DESIRED RESULT          | PASS/FAIL |
@@ -538,6 +552,7 @@ TEST       | DESIRED RESULT          | PASS/FAIL |
 Logout Message | The user should be welcomed with a message stating that they are logging out of their account and see if they are sure | PASS
 Confirmation Button | A button should be visable below the message labelled "Log Out" which logs the user out of their account | PASS
 Site Redirection | After pushing the button the user should be redirected back to the home page and a message should display stating they have signed out | PASS
+Cancel Button | Next to the Sign Out button there is a cancel button which when clicked will keep them signed in and return them to the home page | PASS
 
 ### Bugs
 #### Resolved Bugs
