@@ -19,6 +19,7 @@ The project can be viewed here: [Nerd Box](https://otaku-blog-3f79f19c74fc.herok
 ## Table Of Content
 1. [User Experience](#user-experience)
     - [Project Goals](#project-goals)
+    - [User Stories](#user-stories)
     - [Colour Scheme](#colour-scheme)
 2. [Planning](#planning)
     - [Methodology](#methodology)
@@ -30,6 +31,7 @@ The project can be viewed here: [Nerd Box](https://otaku-blog-3f79f19c74fc.herok
     - [Products Page](#products-page)
     - [Product Detail Page](#product-detail-page)
     - [Register Page](#register-page)
+    - [Email Confirmation Page](#email-confirmation-page)
     - [Login Page](#login-page)
     - [Logout Page](#logout-page)
     - [Profile Page](#profile-page)
@@ -45,7 +47,7 @@ The project can be viewed here: [Nerd Box](https://otaku-blog-3f79f19c74fc.herok
     - [Languages](#languages)
     - [Frameworks, Libraries and Programmes](#frameworks-libraries-and-programmes)
 6. [Testing](#testing)
-    - [Testing User Stories](#testing-user-stories)
+    - [Automated Testing](#automated-testing)
     - [Code Validation](#code-validation)
     - [Device Testing](#device-testing)
     - [Browser Testing](#browser-testing)
@@ -67,7 +69,45 @@ The project can be viewed here: [Nerd Box](https://otaku-blog-3f79f19c74fc.herok
 - Implement authentication layers of that pages are robust and have security.
 
 ### Users Stories
-1. 
+#### User Stories that have been satisfied in ths project through particular apps or their creation:
+| ID | User Story | How/ Where It Was Satisfied |
+| ---------- | ----------------------- | --------- |
+| [1](https://github.com/BenHowkins/nerd_box_pp5/issues/1) | As a User I can Create An Account On The Site so that I Can Have A Personal Account To View And Use On The Site | Registration Page and Profile App |
+| [2](https://github.com/BenHowkins/nerd_box_pp5/issues/2) | As a User I can Log Into My Account so that Upon Returning To The Site I Can Continue From Where I Left Off With The Same Details | Login Page and Profile App |
+| [2](https://github.com/BenHowkins/nerd_box_pp5/issues/2) | As a User I can Log Into My Account so that Upon Returning To The Site I Can Continue From Where I Left Off With The Same Details | Login Page and Profile App |
+| [4](https://github.com/BenHowkins/nerd_box_pp5/issues/4) | As a User I can Have A Personalised Profile so that I Can Have An Individual Profile Containing My Past And Current Orders As Well As Saving My Card Details | Profile App |
+| [5](https://github.com/BenHowkins/nerd_box_pp5/issues/5) | As a Shopper I can See A List Of Available Items so that I Can See What Items I Can Purchase | Boxes App and Products Page |
+| [6](https://github.com/BenHowkins/nerd_box_pp5/issues/6) | As a Shopper I can Read A Description Of The Products so that I Know What I Am Buying And If It Is Right For Me | Boxes App and Product Details Page |
+| [7](https://github.com/BenHowkins/nerd_box_pp5/issues/7) | As a Site User I can Log Out Of My Account so that Others Can Not Use It When I Am Not | Log Out Page |
+| [8](https://github.com/BenHowkins/nerd_box_pp5/issues/8) | As a Shopper I can See Different Variations Of Each Product so that I Can Purchase The Correct One I Want | Boxes App and Product Details Page |
+| [9](https://github.com/BenHowkins/nerd_box_pp5/issues/9) | As a User I can Sort Products By Categories so that I can find the product that I am looking for | Boxes App and Product Page |
+| [10](https://github.com/BenHowkins/nerd_box_pp5/issues/10) | As a User I can Have A Way To Search And Find Products By Keywords so that I Can See Products That I Am Interested In | Search Bar In The Header and Product Page |
+| [11](https://github.com/BenHowkins/nerd_box_pp5/issues/11) | As a User I can See A Detailed Description Of The Product so that I Can See If It Is Right For Me | Boxes App and Product Details Page |
+| [12](https://github.com/BenHowkins/nerd_box_pp5/issues/12) | As a User I can See An Organised Grid Showing The Available Products so that I Can See What Is Available To Purchase | Boxes App and Products Page |
+| [13](https://github.com/BenHowkins/nerd_box_pp5/issues/13) | As a User I can Select The Size Of A Product When Available so that I Can Get The Right Size Product For Me | Boxes App and Product Details Page |
+| [14](https://github.com/BenHowkins/nerd_box_pp5/issues/14) | As a User I can Add Desired Products To My Bag so that I Can Purchase Them At Some Point | Boxes App and Product Details Page |
+| [15](https://github.com/BenHowkins/nerd_box_pp5/issues/15) | As a User I can Select Different Quantities Of Products To Purchase so that I Get The Amount Of Each Product I Want | Boxes App, Product Details Page, Bag App and Bag Page |
+| [16](https://github.com/BenHowkins/nerd_box_pp5/issues/16) | As a User I can Edit And Remove Products From My Bag so that I Only Purchase The Products And Amounts I Want | Bag App and Bag Page |
+| [17](https://github.com/BenHowkins/nerd_box_pp5/issues/17) | As a User I can Input And Save My Data so that I Can Quickly Use It Again At Another Time When I May Need It | Profile App, Profile Page, Checkout App and Checkout Page |
+| [18](https://github.com/BenHowkins/nerd_box_pp5/issues/18) | As a User I can Use My Card And Personal Details To Pay For Products so that I Can Purchase The Goods I Want | Checkout App and Checkout Page |
+| [19](https://github.com/BenHowkins/nerd_box_pp5/issues/19) | As a User I can Recieve Confirmation AFfter I Have Completed My Order so that I Know Payment Was Successful | Checkout App and Checkout Page |
+| [20](https://github.com/BenHowkins/nerd_box_pp5/issues/20) | As a User I can Have My Order Successfully Check Out Even When The Connection Is Lost Mid Payment so that I Am Not Charge Without Purchase Of Goods | Checkout App and Checkout Page |
+| [21](https://github.com/BenHowkins/nerd_box_pp5/issues/21) | As a User I can Receive Messages Appear On The Screen Whenever Something Happens so that I Am Always Aware Of What Is Going On | Home App and Header Bar |
+| [23](https://github.com/BenHowkins/nerd_box_pp5/issues/23) | As a User I can Click On A Link To The Store's Facebook Page so that I Can See What they Are Doing On And Keep Up To Date On Their Social Media | Home App and Footer Bar |
+| [24](https://github.com/BenHowkins/nerd_box_pp5/issues/24) | As an Admin I can Add Products To The Store so that There Are Always New And Different Products Available | Boxes App and Products Mantainance Page |
+| [25](https://github.com/BenHowkins/nerd_box_pp5/issues/25) | As an Admin I can Edit Existing Products so that I Can Update Products When Needed | Boxes App and Edit Products Page |
+| [26](https://github.com/BenHowkins/nerd_box_pp5/issues/26) | As an Admin I can Remove Products From The Store so that I Can Take Products That Are Unavailable For Purchase Off The Store | Boxes App and Products Page |
+
+#### User stories that are planned for future updates:
+
+| ID | Content | 
+| ------ | ------ |
+| [27](https://github.com/BenHowkins/nerd_box_pp5/issues/27) | As an Admin I can Check Stock Levels so that I Know How Many Of Each Product Are In Stock |
+| [28](https://github.com/BenHowkins/nerd_box_pp5/issues/28) | As a User I can Show Interest On Out Of Stock Products so that I Can Find Out When More Become Available |
+| [29](https://github.com/BenHowkins/nerd_box_pp5/issues/29) | As an Admin I can Set Up Certain Products Behind An Age Barrier so that I Can Offer More Products To Older Users |
+| [30](https://github.com/BenHowkins/nerd_box_pp5/issues/30) | As a User I can A Discount Off Product Purchased On My Birthday so that I Can Have A Gift On My Special Day |
+| [31](https://github.com/BenHowkins/nerd_box_pp5/issues/31) | As an Admin I can Limit How Old Users Making Purchases Are so that Children Don't Make Purchases With Their Parents Card |
+| [32](https://github.com/BenHowkins/nerd_box_pp5/issues/32) | As an Admin I can Implement Human Verification so that Only Real People And Not Bots Create Accounts |
 
 ### Colour Scheme
 The website was designed to have a bright but not too overpowering feel to it. This is because it fits in with the general themes assosiated with the content of the boxes (Video Games, Anime, Movies) but also keeps a level of readablity and isn't too overwhelming
@@ -130,11 +170,11 @@ A full copy of the design can be found in this [PDF File](assets/readme/framewor
 
 ### Login Page
 <br>
-<image src="assets/readme/framework/sign_in_page.png" width="650px"></image>
+<image src="assets/readme/framework/log_in_page.png" width="650px"></image>
 
 ### Logout Page
 <br>
-<image src="assets/readme/framework/sign_out_page.png" width="650px"></image>
+<image src="assets/readme/framework/log_out_page.png" width="650px"></image>
 
 ### Profile Page
 <br>
@@ -374,66 +414,8 @@ A list of packages and dependencies can be found in the requirements.txt file.
 
 ## Testing
 
-### User Stories Testing
-1. As a Site User I can See A Paginated List Of Reviews so that I Can Find One To Read And Comment On.
-  - The home page displays reviews in an ordered, paginated view.
-  - The reviews are displayed in descending date order with the newest reviews on the top of the page.
-  - There should be no more than 6 reviews on the page before the scroll bar appears to prevent the page from being too crowded.
-2. As a Site User I can View A List Of Posts so that I Can Select One To Read.
-  - On the main page there should be a visible list of all available posts to read.
-  - The posts should be in descending date order with the newest post at the top of the page.
-  - The page should only have a maximum of 6 posts showing at once before it allows older posts to be visible through screen navigation.
-3. As a Site User I can Click On A Review Post so that I Can Read The Full Review.
-  - When The user clicks on a post they are taken to a new page showing the review.
-  - The page shows the review as well as the feature image and any comments that may have already been posted.
-4. As a Site User/ Admin I can See The Number Of Likes On Each Post so that I Can See What Is Popular.
-  - Have an icon (either a heart or thumbs up) below the review post on both the home page and the review's main page.
-  - The icon has a numerical counter displaying the number of likes the review has received.
-5. As a Site User/ Admin I can View Comments On Individual Posts so that See Others Opinions And Conversations On The Topic.
-  - An icon (a speech bubble) is displayed below the post on the post page to say if/ how many comments it currently has.
-  - Upon clicking on the post on the home page and being taken to the post's full page, any comments made by registered users should be visible below the post in descending order with the oldest comments at the top.
-  - The comments should be in descending order with the oldest comments at the top.
-6. As a Site User I can Create/ Register An Account so that I Can Like And Comment On Post.
-  - The user must create a unique username with an email address.
-  - The user must create and confirm a password.
-  - The user is informed by a message they are successfully registered.
-7. As a Site User I can Log Into My Account so that I Can Continue Liking And Commenting On Posts When I Return To The Site.
-  - The user must input the username/ email address and password used upon creating the account.
-  - If the credentials are correct, they're notified they are logged in and taken to the home page.
-  - If the credentials are wrong, they inform the information is incorrect and are asked to try again.
-8. As a Site User I can Leave A Comment On A Post so that I Can Give My Opinion And Join The Conversation.
-  - When on the main page of a post, a registered user can leave a comment on that post.
-  - The comment area should only appear if the user is logged in
-  - When the comment is made a message will inform the user it's waiting for approval from the site admin.
-  - The comment should only appear once the site admin has approved it.
-9. As a Site User I can Update My Comments so that I Can Change Or Add To My Comment.
-  - Below each comment a registered user has made there will be a button labelled 'Update'.
-  - If the user clicks the button, they are able to make alterations to/ update their comment.
-  - When the user has changed the comment, they click the submit button to confirm the alterations.
-  - When the user pushes the submit button, they are taken to the home page.
-10. As a Site User I can Delete My Comments so that I Can Remove My Comment From The Conversation.
-  - Below each comment a registered user has made there will be a button labelled 'Delete'.
-  - If the user clicks the button, they will be taken to a page asking if they want to delete the message
-  - If the user clicks 'Delete Comment', the comment will be deleted and the user will be taken back to the homepage.
-11. As a Site User I can Like Or Unlike A Post so that I Can Interact With A Post And Show My Opinion.
-  - Have an icon (either a heart or thumbs up) below the review post on the post page.
-  - If the user is logged in then the icon should become clickable.
-  - If the user clicks on the icon it will change (go from empty to solid or coloured) to indicate they like the post, this also increases the number next to the icon indicating the number of likes.
-  - If the user clicks the icon again it will change back to its original state (solid or coloured to an empty icon) to indicate a dislike, this also decreases the number next to the icon.
-12. As a Site Admin I can Create, Read, Update and Delete Posts so that I Can Manage My Blog's Content.
-  - The admin/ superuser will be able to write posts that appear on the main site.
-  - The post panel should only be visible on the admin page of the site when logged in as a superuser.
-  - Once a post is created, the superuser can edit and/or delete the post by clicking the corresponding button.
-13. As a Site Admin I can Create Draft Posts so that I Can Finish The Posts At A Later Date When Required.
-  - The admin/ superuser will be able to save posts they are writing by saving the post under the status 'Draft'.
-  - The draft posts should be saved on the admin page and not visible on the main site until the status is changed to 'Published'.
-  - Once a draft post is published, it should appear on the main page.
-14. As a Site Admin I can Approve Or Reject Comments so that I Can Filter Out Inappropriate Comments.
-  - When a user makes a comment on a post, it doesn't appear automatically under the post.
-  - A message appears when a comment is entered stating 'comment awaiting approval by admin'.
-  - On the admin page the comment is visible for the admin to read.
-  - If the comment is approved, it appears on the site under the post it was made on.
-  - If it isn't approved, it will not appear on the site and will be deleted.
+### Automated tests
+Automated tests have not been created due to time constrains of the project.
 
 ### Code Validation
 The following validators were used to test the code:
@@ -462,97 +444,163 @@ The website was tested on the following browsers with no issues:
 ### Feature Testing
 The following manual tests were carried out:
 #### General: base.html
-TEST       | DESIRED RESULT          | PASS/FAIL |
----------- | ----------------------- | --------- |
-Logo | When the logo is clicked, the user is brought back to the home page | PASS
-Mobile menu | On mobile devices, a burger menu is used to display three nav links: a link back to the home page and two dropdown menus to display the categories of the current and past boxes. There is also icons for the search bar, my account and bag links next to the burger menu | PASS
-Search bar | Inputting information into the search bar brings up a page with relivant search results | PASS
-My Account link | Brings up a mini drop menu with a number of links depending on if the user is signed in or out or is a superuser | PASS
-Register nav link | Brings the user to the signup page | PASS
-Login nav link | Brings the user to the login page | PASS
-Logout nav link | Brings the user to the logout page | PASS
-My Profile link | Brings the user to their profile page | PASS
-Product Management nav link | If the user is a SuperUser it brings user to the product management page | PASS
-Bag link | Brings the user to the bag page | PASS
-All Current Boxes dropdown link | Brings up a dropdown menu containing links to each categories of the current box plus a link that displays all available current boxes | PASS
-Anime Box link | Brings the user to a page displaying all available boxes in the Anime Box category | PASS
-Combo Box link | Brings the user to a page displaying all available boxes in the Combo Box category | PASS
-Gaming Box link | Brings the user to a page displaying all available boxes in the Gaming Box category | PASS
-Movie Box link | Brings the user to a page displaying all available boxes in the Movie Box category | PASS
-All Current Boxes link | Brings the user to a page displaying all available current boxes | PASS
-Past Boxes dropdown link | Brings up a dropdown menu containing links to each categories of the past box plus a link that displays all available past boxes | PASS
-Past Anime Box link | Brings the user to a page displaying all available boxes in the Past Anime Box category | PASS
-Past Gaming Box link | Brings the user to a page displaying all available boxes in the Past Gaming Box category | PASS
-Past Movie Box link | Brings the user to a page displaying all available boxes in the Past Movie Box category | PASS
-All Past Boxes link | Brings the user to a page displaying all available past boxes | PASS
-Footer link | When clicked, the facebook link in the footer opens to the facebook page in a new browser window | PASS
-Mailchimp link | When an email address is input and submitted in the link a message confirming the subscription to the news letter | PASS
+| TEST       | DESIRED RESULT          | PASS/FAIL |
+| ---------- | ----------------------- | --------- |
+| Logo | When the logo is clicked, the user is brought back to the home page | PASS |
+| Mobile Menu | On mobile devices, a burger menu is used to display three nav links: a link back to the home page and two dropdown menus to display the categories of the current and past boxes. There is also icons for the search bar, my account and bag links next to the burger menu | PASS |
+| Search Bar | Inputting information into the search bar brings up a page with relivant search results | PASS |
+| My Account Link | Brings up a mini drop menu with a number of links depending on if the user is signed in or out or is a superuser | PASS |
+| Register Nav Link | Brings the user to the signup page | PASS |
+| Login Nav Link | Brings the user to the login page | PASS |
+| Logout Nav Link | Brings the user to the logout page | PASS |
+| My Profile Link | Brings the user to their profile page | PASS |
+| Product Management Nav Link | If the user is a SuperUser it brings user to the product management page | PASS |
+| Bag Link | Brings the user to the bag page | PASS |
+| All Current Boxes Dropdown Link | Brings up a dropdown menu containing links to each categories of the current box plus a link that displays all available current boxes | PASS |
+| Anime Box Link | Brings the user to a page displaying all available boxes in the Anime Box category | PASS |
+| Combo Box Link | Brings the user to a page displaying all available boxes in the Combo Box category | PASS |
+| Gaming Box Link | Brings the user to a page displaying all available boxes in the Gaming Box category | PASS |
+| Movie Box Link | Brings the user to a page displaying all available boxes in the Movie Box category | PASS |
+| All Current Boxes Link | Brings the user to a page displaying all available current boxes | PASS |
+| Past Boxes Dropdown Link | Brings up a dropdown menu containing links to each categories of the past box plus a link that displays all available past boxes | PASS |
+| Past Anime Box Link | Brings the user to a page displaying all available boxes in the Past Anime Box category | PASS |
+| Past Gaming Box Link | Brings the user to a page displaying all available boxes in the Past Gaming Box category | PASS |
+| Past Movie Box Link | Brings the user to a page displaying all available boxes in the Past Movie Box category | PASS |
+| All Past Boxes Link | Brings the user to a page displaying all available past boxes | PASS |
+| Footer Link | When clicked, the facebook link in the footer opens to the facebook page in a new browser window | PASS |
+| Mailchimp Link | When an email address is input and submitted in the link a message confirming the subscription to the news letter | PASS |
 
 #### Home Page: index.html
-TEST       | DESIRED RESULT          | PASS/FAIL |
----------- | ----------------------- | --------- |
-Information Cards | A number of card each containing information about the store with key information such as categories and the store name highlighted in bold to emphasize them | PASS
-Themes Title Box | A single page length white box containing text to state that the below text is the current available themes for each category | PASS
-Theme boxes | Three boxes should be at the base of the page above the footer stating the current themes of each box with a small 1-2 line hook for the boxes | PASS
+| TEST       | DESIRED RESULT          | PASS/FAIL |
+| ---------- | ----------------------- | --------- |
+| Information Cards | A number of card each containing information about the store with key information such as categories and the store name highlighted in bold to emphasize them | PASS |
+| Themes Title Box | A single page length white box containing text to state that the below text is the current available themes for each category | PASS |
+| Themes Boxes | Three boxes should be at the base of the page above the footer stating the current themes of each box with a small 1-2 line hook for the boxes | PASS |
 
 #### Products Page: products.html
-TEST       | DESIRED RESULT          | PASS/FAIL |
----------- | ----------------------- | --------- |
-Page Title | The user should see a title at the top of the page below the header stating that this is the Products page | PASS
-Category Boxes | There should be below the title boxes with the names of the caegories the user selected to see | PASS
-Individual Category Box Selection | If more than one was selected then clicking a box will change the product page to show just that category | PASS
-Item Cards | A card for each box is visible containing: feature image, name , price and category | PASS
-Superuser Extra Item Card Options | If the user is a superuser then there should be two extra option on the item card, one is a link to the edit product page labelled Edit and the other deletes the item labelled Delete | PASS
-Edit Link | Clicking the link will take the superuser to the edit poduct page | PASS
-Delete Link | Clicking the link will delete the product from the store | PASS
-Display Grid | The available item cards for the category/ categories selected should be displayed in the rows containing no more than four cards per row | PASS
-Site Direction | Upon clicking on the feature image of an item, the user should be directed to the product details page for that product | PASS
-Page Up | At the base of the page below the last row of item cards but above the footer is an arrow which when pushed returns the user to the toop of the page | PASS
+| TEST       | DESIRED RESULT          | PASS/FAIL |
+| ---------- | ----------------------- | --------- |
+| Page Title | The user should see a title at the top of the page below the header stating that this is the Products page | PASS
+| Category Boxes | There should be below the title boxes with the names of the caegories the user selected to see | PASS
+| Individual Category Box Selection | If more than one was selected then clicking a box will change the product page to show just that category | PASS
+| Item Cards | A card for each box is visible containing: feature image, name, price and category | PASS
+| Superuser Extra Item Card Options | If the user is a superuser then there should be two extra option on the item card, one is a link to the edit product page labelled Edit and the other deletes the item labelled Delete | PASS
+| Edit Link | Clicking the link will take the superuser to the edit poduct page | PASS
+| Delete Link | Clicking the link will delete the product from the store | PASS
+| Display Grid | The available item cards for the category/ categories selected should be displayed in the rows containing no more than four cards per row | PASS
+| Site Direction | Upon clicking on the feature image of an item, the user should be directed to the product details page for that product | PASS
+| Page Up | At the base of the page below the last row of item cards but above the footer is an arrow which when pushed returns the user to the top of the page | PASS |
 
-#### Post Detail Page: post_detail.html
-TEST       | DESIRED RESULT          | PASS/FAIL |
----------- | ----------------------- | --------- |
-Post Details | The top of the page should display: Author's Name, Post Title, Excerpt and Date Published on the left side of the screen and the Featured Image on the right | PASS
-Post Body | The post itself should be displayed directly below the details card | PASS
-Likes And Comments Counter | Icons and counters displaying the current number of likes and comment the post has should be visible below the post | PASS
-Like And Unlike |  When a user has an account and is logged in they are able to click on the like icon and like the post or click it again and unlike the post | PASS
-Leave A Comment Section | If the user has an account and is logged in then there will be a box visable for them to leave a comment. If they aren't logged in the box won't appear | PASS
-Comment Authorisation | All comments when left shouldn't display automatically but should show a message stating they are "Await Approval". Once approval is given they should then appear on the page | PASS
-Comment List | All approved comment should appear down the left side of the screen in order of creation with the oldest comment at the top and getting newer as you go down, to easily follow the conversation | PASS
-Comment Edit Button | A button should appear below any comment a logged in user has made named "Edit". This should take them to the comment edit page. This button should only appear on comments they have made | PASS
-Delete Comment Button | A button should appear below any comment a logged in user has made "Delete". This should take them to the comment delete page. This button should only appear on comments they have made | PASS
+
+#### Product Detail Page: product_detail.html
+| TEST       | DESIRED RESULT          | PASS/FAIL |
+| ---------- | ----------------------- | --------- |
+| Product Image | On the left side of the screen there is an image of the current product that the user is looking at or a placeholder image of a box | PASS |
+| Image Link | Clicking on the product image will open a new window with the image full size | PASS |
+| Product Information | On the right of the image should be the current product's: name, price, category and a decription of the product | PASS |
+| Superuser Extra Options | If the user is a superuser then uder the category should be two link, one is a link to the edit product page labelled Edit and the other deletes the item labelled Delete | PASS |
+| Edit Link | Clicking the link will take the superuser to the edit poduct page | PASS |
+| Delete Link | Clicking the link will delete the product from the store | PASS |
+| Size Sector | If the product has the option of sizes then there should be a selector which allowing the user to select their desired size from: XS, S, M, L and XL | PASS |
+| Quantity Selector | There should be a selector which allowing the user to select their desired quantity | PASS |
+| Quantity Selector Input | The quantity can be changed/ input either by using the arrows at the right side of the input box or by manually inputting it into the box. The selector will also not allow the number to go above 99 and below 1 or anything other than a number | PASS |
+| Add To Bag Button | At the base of the page is an 'Add To Bag' button which when clicked will add the current product and quantity selected to the bag. A message will appear at the top of the page stating the product has been added to the bag | PASS |
+| Keep Shopping Button | At the base of the page next to the 'Add To Bag' button is a 'Keep Shopping' button which when clicked takes the user back to the Products page | PASS |
 
 #### Register Page: signup.html
-TEST       | DESIRED RESULT          | PASS/FAIL |
----------- | ----------------------- | --------- |
-Register Message | The user should be welcomed with a message saying welcome back to the page and told if they already have an account to log in with a link to the log in page or sign up below if they don't have an account | PASS
-Input Details | There should be labeled boxes for the user to input an email address and another to confirm it, a box for a username and a password and another password field to confirm the password match. There is also a submit button to confirm entry of the details | PASS
-Input Autherisation | After the submit button is pushed the site will check the data input against the database. If the passwords match and the username is unique the user will be redirected to another screen stating that an email has been sent to the provided address and they must click the link to confirm their account. If the username or email address is taken the user will be informed it has been taken and asked to pick another one. If the passwords don't match the user will be told they didn't match and asked to try again | PASS
-Site Redirection | After pushing the submit button with correct details, the user should be redirected bto another screen stating that an email has been sent to the provided address and they must click the link to confirm their account | PASS
+| TEST       | DESIRED RESULT          | PASS/FAIL |
+| ---------- | ----------------------- | --------- |
+| Register Message | The user should be welcomed with a message saying welcome back to the page and told if they already have an account to log in with a link to the log in page or sign up below if they don't have an account | PASS | |
+| Input Details | There should be labeled boxes for the user to input an email address and another to confirm it, a box for a username and a password and another password field to confirm the password match. There is also a 'Submit' button to confirm entry of the details | PASS |
+| Input Autherisation | After the 'Submit' button is pushed the site will check the data input against the database. If the passwords match and the username is unique the user will be redirected to another screen stating that an email has been sent to the provided address and they must click the link to confirm their account. If the username or email address is taken the user will be informed it has been taken and asked to pick another one. If the email addresses and/ or passwords don't match the user will be told they didn't match and asked to try again | PASS |
+| Site Redirection | After pushing the 'Submit' button with correct details, the user should be redirected bto another screen stating that an email has been sent to the provided address and they must click the link to confirm their account | PASS |
 
 #### Account Confirm Page: email_confirm.html
-TEST       | DESIRED RESULT          | PASS/FAIL |
----------- | ----------------------- | --------- |
-Conformation Message | The user should be welcomed with a message asking them to confirm that the email address provided is for the username provided | PASS
-Conformation Button | The user should have a button labelled confirm which when clicked will confirm the details, create the account and redirect the user to the login page | PASS
-Site Redirection | After pushing the button the user should be redirected back to the login page | PASS
+| TEST       | DESIRED RESULT          | PASS/FAIL |
+| ---------- | ----------------------- | --------- |
+| Conformation Message | The user should be welcomed with a message asking them to confirm that the email address provided is for the username provided | PASS |
+| Conformation Button | The user should have a button labelled 'Confirm' which when clicked will confirm the details, create the account and redirect the user to the login page | PASS |
+| Site Redirection | After pushing the button the user should be redirected back to the login page | PASS |
 
 #### Login Page: login.html
-TEST       | DESIRED RESULT          | PASS/FAIL |
----------- | ----------------------- | --------- |
-Login Message | The user should be welcomed with a message saying if they don't have an account they need to sign up first with a link to the register page | PASS
-Input Details | There should be labeled boxes for the user's username or email and password and a submit button to confirm entry of the details | PASS
-Input Autherisation | After the submit button is pushed the site will check the data input against the database. If the data is correct the user is redirected back to the home page, if it is incorrect a message will appear stating that either the username and/ or password are incorrect and allow the user to try again | PASS
-Site Redirection | After pushing the submit button with correct details, the user should be redirected back to the home page and a message should display stating they have signed in with their username | PASS
-Home Button | Next to the Submit button there is a Home button which when clicked will return the user to the home page | PASS
+| TEST       | DESIRED RESULT          | PASS/FAIL |
+| ---------- | ----------------------- | --------- |
+| Login Message | The user should be welcomed with a message saying if they don't have an account they need to sign up first with a link to the register page | PASS |
+| Input Details | There should be labeled boxes for the user's username or email and password and a 'Submit' button to confirm entry of the details | PASS |
+| Input Autherisation | After the 'Submit' button is pushed the site will check the data input against the database. If the data is correct the user is redirected back to the home page, if it is incorrect a message will appear stating that either the username and/ or password are incorrect and allow the user to try again | PASS |
+| Site Redirection | After pushing the 'Submit' button with correct details, the user should be redirected back to the home page and a message should display stating they have signed in with their username | PASS |
+| Home Button | Next to the 'Submit' button there is a 'Home' button which when clicked will return the user to the home page | PASS |
 
 #### Logout Page: logout.html
-TEST       | DESIRED RESULT          | PASS/FAIL |
----------- | ----------------------- | --------- |
-Logout Message | The user should be welcomed with a message stating that they are logging out of their account and see if they are sure | PASS
-Confirmation Button | A button should be visable below the message labelled "Log Out" which logs the user out of their account | PASS
-Site Redirection | After pushing the button the user should be redirected back to the home page and a message should display stating they have signed out | PASS
-Cancel Button | Next to the Sign Out button there is a cancel button which when clicked will keep them signed in and return them to the home page | PASS
+| TEST       | DESIRED RESULT          | PASS/FAIL |
+| ---------- | ----------------------- | --------- |
+| Logout Message | The user should be welcomed with a message stating that they are logging out of their account and see if they are sure | PASS |
+| Confirmation Button | A button should be visable below the message labelled 'Sign Out' which logs the user out of their account | PASS |
+| Site Redirection | After pushing the button the user should be redirected back to the home page and a message should display stating they have signed out | PASS |
+| Cancel Button | Next to the 'Sign Out' button there is a 'Cancel' button which when clicked will keep them signed in and return them to the home page | PASS |
+
+#### Profile Page: profile.html
+| TEST       | DESIRED RESULT          | PASS/FAIL |
+| ---------- | ----------------------- | --------- |
+| Page Title | At the top of the page is a title stating this is My Profile page | PASS |
+| Delivery Information Title | At the top of the left hand side of the page below the title is a subheading stating that the below information is the Default Delivery Information | PASS |
+| Delivery Information Input | Below the title there is seven input boxes labeled: Phone Number, Street Address 1, Street Address 2, Town or City, County State or Locality, Postal Code and Country | PASS |
+| Update Information Button | Below the input boxes is an 'Update Information' button which when clicked will save the current information to the profile with a message stating that the information has been saved | PASS |
+| Order History Title | At the top of the right hand side of the page below the title is a subheading stating that the below information is the Order History Information | PASS |
+| Order History Headers | Below the Order History subtitle are four column with the headers: Order Number, Date, Items and Order Total | PASS |
+| Order History | If there hasn't been any orders then this section will be blank, but if orders have been made then below each column header will be the relivant information for each of the orders | PASS |
+
+#### Bag Page: bag.html
+| TEST       | DESIRED RESULT          | PASS/FAIL |
+| ---------- | ----------------------- | --------- |
+| Page Title | At the top of the page is a title stating this is 'Shopping Bag' page | PASS |
+| Empty Bag Message | If there is currently no items in the user's bag then there will be a message stating 'Your bag is empty' | PASS |
+| Product Headers | Below the 'Shopping Bag' Title are four column with the headers: Product Info, Price, Quantity and Subtotal | PASS |
+| Product Info | Under the 'Product Info' header should be the product image with the procucts: name, size selected (if applicable) and SKU number in a column next to the image | PASS |
+| Price | Under the 'Price' header should be the price for the product per unit incase multiples are selected | PASS |
+| Quantity | Under the 'Quantity' header should be an input box with the current selected quantity input | PASS |
+| Quantity Input | The quantity can be changed/ input either by using the arrows at the right side of the input box or by manually inputting it into the box. The selector will also not allow the number to go above 99 and below 1 or anything other than a number | PASS |
+| Update Button | On the left hand side below the quantity input box is a link/ button named 'Update' whch when clicked will update the quantity of the current item to what is currently in the quantity box | PASS |
+| Remove Button | On the right hand side below the quantity input box is a link/ button named 'Remove' whch when clicked will remove this item from from shopping bag | PASS |
+| Subtotal | Under the 'Subtotal' header should be the total price of the product by multiply price and quantity together | PASS |
+| Items | If there is currently more than one different items in the users bag then they should be displayed with each item in it's own row | PASS |
+| Bag Total | Below the last item on the right of the screen is a header labelled 'Bag Total:' with the current total of all the items in the shopping bag | PASS |
+| Delivery | Below the 'Bag Total:' header is another header labelled 'Delivery:' with the current current charge for delivery | PASS |
+| Grand Total | Below the 'Delivery:' header is another header labelled 'Grand Total:' with the current total of all the items in the shopping bag and delivery charge | PASS |
+| Free Delivery Message | If a delivery charge is being applied a message will be seen under the grand total stating 'You could get free delivery by spending just $xx.xx more!' letting the user know how far they are from the free delivery threshold | PASS |
+| Secure Checkout Button |At the base of the page is a 'Secure Checkout' button which when clicked will confirm the content of the bag and redirect the user to the 'Checkout' page to finish their purchase | PASS |
+| Keep Shopping Button | At the base of the page next to the 'Secure Checkout' button is a 'Keep Shopping' button which when clicked takes the user back to the Products page | PASS |
+
+#### Checkout Page: checkout.html
+
+#### Product Management Page: add_product.html
+| TEST       | DESIRED RESULT          | PASS/FAIL |
+| ---------- | ----------------------- | --------- |
+| Page Title | At the top of the page is a title stating this is 'Product Management' page | PASS |
+| Page Subheader | Below the 'Product Management' title is a subheader stating 'Add a Product' which lets the superuser know that this page allows them to add a product | PASS |
+| Product Information Input | Below the subheader there is six input boxes labeled: Category, SKU, Name, Description, Has Sizes and | Price and a 'Select Image' button below them | PASS |
+| Category Selector Input | The Category selector has a dropdown menu of all the available categories allowing the superuser to select the desired category | PASS |
+| Has Sizes Selector Input | The Has Sizes selector has a dropdown menu allowing the superuser to select if the item has sizes or not | PASS |
+| Price Input | The Price should be an input box which allows the superuser to input the desired price. The price can be changed/ input either by using the arrows at the right side of the input box or by manually inputting it into the box. The selector will also not allow the number to go below 1 or anything other than a number | PASS |
+| Select Image Button | The 'Select Image' button will open up the superuser's image folder to allow them to select the image for the product | PASS |
+| Add Product Button | At the base of the page is a 'Add Product' button which when clicked will confirm the information added, add product to the store and redirect the superuser to the 'Product Detail' page for the added product | PASS |
+| Required Fields | When clicking the 'Add Product' button and either the Name, Description or Price field is empty a message will appear stating 'Please fill in this field' | PASS |
+| Cancel Button | At the base of the page next to the 'Add Product' button is a 'Cancel' button which when clicked takes the superuser back to the Products page | PASS |
+ 
+#### Edit Product Page: edit_product.html
+| TEST       | DESIRED RESULT          | PASS/FAIL |
+| ---------- | ----------------------- | --------- |
+| Page Title | At the top of the page is a title stating this is 'Product Management' page | PASS |
+| Page Subheader | Below the 'Product Management' title is a subheader stating 'Edit a Product' which lets the superuser know that this page allows them to edit a product | PASS |
+| Product Information Input | Below the subheader there is six input boxes labeled: Category, SKU, Name, Description, Has Sizes and Price each being prefilled with the current information for the product. There is also the current image for the product with a checkbox labelled 'Remove' as well as the 'Select Image' button below them. | PASS |
+| Category Selector Input | The Category selector has a dropdown menu of all the available categories allowing the superuser to select the desired category | PASS |
+| Has Sizes Selector Input | The Has Sizes selector has a dropdown menu allowing the superuser to select if the item has sizes or not | PASS |
+| Price Input | The Price should be an input box which allows the superuser to input the desired price. The price can be changed/ input either by using the arrows at the right side of the input box or by manually inputting it into the box. The selector will also not allow the number to go below 1 or anything other than a number | PASS |
+| Select Image Button | The 'Select Image' button will open up the superuser's image folder to allow them to select a new image for the product | PASS |
+| Update Product Button | At the base of the page is a 'Update Product' button which when clicked will confirm the information added, edit product's details in the store and redirect the superuser to the 'Product Detail' page for the edited product | PASS |
+| Required Fields | When clicking the 'Update Product' button and either the Name, Description or Price field is empty a message will appear stating 'Please fill in this field' | PASS |
+| Remove Image Checkbox | If the 'Remove' checkbox is checked when the 'Update Product' button is clicked and a replacement image isn't selected then the placeholder image should be used for the product's image | PASS |
+| Cancel Button | At the base of the page next to the 'Edit Product' button is a 'Cancel' button which when clicked takes the superuser back to the Products page | PASS |
 
 ### Bugs
 #### Resolved Bugs
