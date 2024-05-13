@@ -13,7 +13,7 @@ On the site, admin can:
 
 This has been developed as my 5th Portfollio Project for my Full Stack Software Development Diploma with Code Institute.
 
-The project can be viewed here: [Nerd Box](https://otaku-blog-3f79f19c74fc.herokuapp.com/)
+The project can be viewed here: [Nerd Box](http://nerd-box-cc697c19580a.herokuapp.com/)
 
 
 ## Table Of Content
@@ -39,25 +39,32 @@ The project can be viewed here: [Nerd Box](https://otaku-blog-3f79f19c74fc.herok
     - [checkout Page](#checkout-page)
     - [Product Management Page](#product-management-page)
     - [Edit Product Page](#edit-product-page)
-4. [SEO And Web Marketing](#seo-and-web-marketing)
+4. [Future Features](#futrue-features)
+    - [Stock Management](#stock-management)
+    - [Product Interest](#products-interest)
+    - [Age Related Products](#age-related-products)
+    - [Birthday Discount](#birthday-discount)
+    - [Age Limitation](#age-limitation)
+    - [Human Verification](#human-verification)
+5. [SEO And Web Marketing](#seo-and-web-marketing)
     - [Search Engine Optimization](#seearch-engine-optimization)
     - [Newsletter](#newsletter)
     - [Facebook](#facebook)
-5. [Technololgies Used](#technologies-used)
+6. [Technololgies Used](#technologies-used)
     - [Languages](#languages)
     - [Frameworks, Libraries and Programmes](#frameworks-libraries-and-programmes)
-6. [Testing](#testing)
+7. [Testing](#testing)
     - [Automated Testing](#automated-testing)
     - [Code Validation](#code-validation)
     - [Device Testing](#device-testing)
     - [Browser Testing](#browser-testing)
     - [Feature Testing](#feature-testing)
     - [Bugs](#bugs)
-7. [Deployment](#deployment)
-8. [Credit](#credit)
+8. [Deployment](#deployment)
+9. [Credit](#credit)
     - [Content](#content)
     - [Code](#code)
-9. [Acknowledgements](#acknowledgements)
+10. [Acknowledgements](#acknowledgements)
 
 
 ## User Experience
@@ -363,6 +370,41 @@ A full copy of the design can be found in this [PDF File](assets/readme/framewor
 <image src="assets/readme/images/edit_product_page_second_section.png" width="650px"></image>
 <image src="assets/readme/images/edit_product_page_bottom.png" width="650px"></image>
 
+## Futrue Features
+### Stock Management
+- In a future development some kind of stock app needs to be added.
+- This should contain a database containing stock numbers of each product which is altered when a purchase is completed.
+- This allows the admin to know how many of each product are currently instock and to order more when needed or change the item to out of stock.
+
+### Products Interest
+- In a future development there should be a feature which allows users to show interest on out of stock products.
+- This will allow the admin to know which out of stock products have interest and which don't.
+- This will allow the admin to know a rough estimate of how many of each product need ordering.
+- This feature would also let admin know which usersto contact directly when a product is back in stock
+
+### Age Related Products
+- In a future development there should a way to use the age/ date of birth field to allow more products to be seen and purchased.
+- It should work by making use of the date of birth field to check if a user is above a certain age.
+- If they are above the threshold then certain product can have a variation to them for an older audience.
+- The includes an 'Ecchi' version of the anime box which will contain a more mature figure (a feature I have found in research is popular in similar anime supscription boxes) or an 'R Rated' movie box which can contain a more mature version of the novel (adding more violent or sexualised parts to the novel adaptation when appropriate which can make it feel truer to the film)
+
+### Birthday Discount
+- In a future development there should a way to use the age/ date of birth field to give the user a special discount on their birthday.
+- It should work by making use of the date of birth field to check the user's birthday against the current day.
+- If it is the users birthday a special discount should be applied to their order for that day only.
+- This will allow the user to feel celebrated on their birthday and may get new users in when the feature is mentioned.
+- A security measure however would have to be impemented to stop users changing their date of birth to get the discount repeatedly on different days.
+
+### Age Limitation
+- In a future development there should a way to use the age/ date of birth field to only allow users over a certain age to checkout.
+- It should work by making use of the date of birth field to check if a user is above a certain age.
+- This will help to reduce the likelihood of children checking out without their parents knowing or approval (aan event that I have found in both research online and with aquatences is an issue)
+
+### Human Verification
+- In a future development a human verification system should be implemented onto the registration screen.
+- It should work by making the user complete a human verification test to check the they are a human and not a bot.
+- This will limit or even eliminate the amount of fake accounts the store has as well as the chance of purchases being made by bots with incorrect details (both card and delivery)
+
 ## SEO And Web Marketing
 
 ### Search Engine Optimalization
@@ -604,33 +646,290 @@ The following manual tests were carried out:
 
 ### Bugs
 #### Resolved Bugs
-1. Authorised Comment User Bug- When creating the buttons for the "Edit" and "Delete" comment functionality I was unable to correctly have it so that only the user who created the comment could edit or delete it. I realised that I had: 
-  1. I only used a single "=" sign in the equalty check.
-  2. I had not used the correct wording in the if statement. I had put "user.name == comment.name" instead of "user.username == comment.name"
-once I corrected both these issue both buttons appeared correctly.
-2. Edit Comments Bug- Whilst trying to create this functionality I was unable to get it to correctly function without giving me a "No Reverese" or a "Page Not Found" error. After speaking to several Code Institute Tutor I found that I was trying to override the Post and Get methods and instead I should be updating the view. And after reading through and article on [GeeksForGeeks](https://www.geeksforgeeks.org/) I was able to write the correct code.
+1. Upon deployment to [Heroku](https://id.heroku.com/login) it was discovered that the image used for the logo would not transfer across from the local host server to final deployed site. After checking the code and reuploading to image to [Amazon Web Server](https://aws.amazon.com/) it was decided to remove the image as the logo and instead have a text logo with a [Font Awesome](https://fontawesome.com/) icon instead.
 
 #### Unresolved Bugs
 - Through testing and validations I don't believe that there is any unresolved bugs on the site.
 
 ## Deployment
-The program was developed in Codeanywhere. It was then commited and pushed to GitHub periodically.
-The finished project was then deployed to Heroku. 
-Deployment to Heroku was completed using the following steps: 
-1. Open and login to [Heroku](https://id.heroku.com/login).
-2. From the dashboard, click 'New', then click 'Create new app' from the dropdown menu. 
-3. Enter the App name, choose a region, then click 'Create app'.
-4. Navigate to the 'Settings' tab.
-5. Within 'Settings', navigate to 'Convig Vars'. Click 'Reveal Config Vars'.
-6. Add config vars using the 'KEY' and 'VALUE' pairs from env.py.
-7. Navigate to the 'Deploy' tab. 
-8. Within 'Deploy', navigate to 'Deployment method'. 
-9. Click on 'GitHub'. Navigate to 'Connect to GitHub' and click 'Connect to GitHub' 
-10. Within 'Connect to GitHub', use the search function to find the repository to be deployed. Click 'Connect'.
-11. Navigate to either 'Automatic Deploys' or 'Manual Deploys' to choose which method to deploy the application.
-12. Click on 'Enable Automatic Deploys' or 'Deploy Branch' respectively, depending on chosen method. 
-13. Once the app is finished building, a message saying 'Your app was successfully deployed' will appear.
-14. Click 'View' to see the deployed app. 
+The program was developed in Gitpod. It was then committed and pushed to GitHub periodically.
+
+### Deployment to Heroku
+#### In your app 
+1. add the list of requirements by writing in the terminal "pip3 freeze --local > requirements.txt"
+2. Git add and git commit the changes made
+
+#### Log into Heroku
+
+3. Log into [Heroku](https://id.heroku.com/login) or create a new account and log in
+4. top right-hand corner click "New" and choose the option Create new app, if you are a new user, the "Create new app" button will appear in the middle of the screen
+5. Write app name - it has to be unique, it cannot be the same as this app
+6. Choose Region - I am in Europe
+7. Click "Create App"
+8.  The page of your project opens
+9. Go to Resources Tab, Add-ons, search and add Heroku Postgres
+10. Choose "settings" from the menu on the top of the page
+10. Go to section "Config Vars" and click button "Reveal Config Vars"
+12. Add the below variables to the list
+    * Database URL will be added automaticaly
+    * Secret_key - is the djnago secret key can be generated [here](https://miniwebtool.com/django-secret-key-generator/)
+13. Go back to your code
+14. Procfile needs to be created in your app
+```
+web: gunicorn PROJ_NAME.wsgi
+```
+15. In settings in your app add Heroku to ALLOWED_HOSTS
+16. Add and commit the changes in your code and push to github
+17. Next go to "Deploy" in the menu bar on the top 
+18. Go to section "deployment method", choose "GitHub"
+19. New section will appear "Connect to GitHub" - Search for the repository to connect to
+20. Type your repositories name and click "search"
+21. Once Heroku finds your repository - click "connect"
+22. Scroll down to the section "Automatic Deploys"
+23. Click "Enable automatic deploys" or choose "Deploy branch" and manually deploy
+24. Click "Deploy branch"
+23. Click the button "View" once the "the app was successfully deployed" message appears
+
+The live link can be found [here](https://bonsai-shop.up.railway.app/).
+
+### Deployment moved to railway app
+Subsequently to Heroku removing free tiers the app was moved to Railway app and deployed there successfully. Products data was migrated to new database.
+
+### Forking the GitHub Repository
+
+By forking the GitHub Repository you will be able to make a copy of the original repository on your own GitHub account allowing you to view and/or make changes without affecting the original repository by using the following steps:
+
+1. Log in to GitHub and locate the [GitHub Repository](repo here???)
+2. At the top of the Repository (not top of page) just above the "Settings" button on the menu, locate the "Fork" button.
+3. You should now have a copy of the original repository in your GitHub account.
+
+### Making a Local Clone
+
+1. Log in to GitHub and locate the [GitHub Repository](repo here???)
+2. Under the repository name, click "Clone or download".
+3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
+4. Open commandline interface on your computer
+5. Change the current working directory to the location where you want the cloned directory to be made.
+6. Type `git clone`, and then paste the URL you copied in Step 3.
+
+```
+$ git clone http..repo here???
+```
+
+7. Press Enter. Your local clone will be created.
+
+### Setting up your local enviroment
+
+1. Create Virtual enviroment on your computer or use gitpod built in virtual enviroment feature.
+
+2. Create env.py file. It needs to contain those 5 variables.
+
+* Database URL can be obtained from [heroku](https://dashboard.heroku.com/), add PostgreSQL as an add on when creating an app. 
+* Secret_key - is the djnago secret key can be generated [here](https://miniwebtool.com/django-secret-key-generator/). 
+* Cloudinary URL can be obtained from [cloudinary](https://cloudinary.com/) follow the steps on the website to register. 
+* Google API key can be obtained [here](https://cloud.google.com/gcp?authuser=1) you will have to register with google and create new app to get the API key. Follow the instructions on the website.
+
+```
+DEVELOPMENT
+SECRET_KEY
+
+STRIPE_PUBLIC_KEY
+STRIPE_SECRET_KEY 
+STRIPE_WH_SECRET
+
+```
+PostgreSQL and AWS keys are needed only on Heroku, not in local IDE
+
+3. Run command 
+```
+pip3 install -r requirements.txt
+```
+
+
+### Getting Stripe keys
+Go to developers tab. On side menu you will find API keys. Copy STRIPE_PUBLIC_KEY and STRIPE_SECRET_KEY.
+
+Go to Webhooks. Click Add Endpoint button in top right hand corner.
+Add endpoint URL (your local or deployed URL)
+Add all events 
+Than click add endpoint
+You should be redirected to this webhook's page. Reveal webhook sign in secret and copy to Settings and to heroku as STRIPE_WH_SECRET variable
+
+### Getting email variables from gmail
+
+
+- Log into gmail account
+- Go to Settings and than See all settings
+- Top menu go to Accounts and import
+- Find on the list Other google account settings
+- Left side menu - Security
+- Turn on two step verification: add phone number and follow instructions
+- Go back to security
+App passwords - Select Mail, Select Device - Other, Django, Copy app password.
+
+In Heroku 
+EMAIL_HOST_PASS is the password copied from above.
+EMAIL_HOST_USER is the gmail email address
+
+
+### Setting AWS bucket
+
+
+1. Go to [Amzon Web Services](https://aws.amazon.com/) page and login or register
+
+2. You should be redirected to AWS Managment Console, if not click onto AWS logo in top left corner or click Services icon and choose Console Home
+
+3. Below the header AWS Services click into All Services and find **S3** under Storage
+
+4. Create New Bucket using **Create Bucket** button in top right hand corner
+
+- **Configuration:** type in your chosen name for the bucket (preferably matching your heroku app name) and AWS Region closest to you
+
+
+- **Object ownership:** ACLs enabled, Bucket owner preffered
+
+- **Block Public Access settings:** Uncheck to allow public access, Acknowledge that the current settings will result that the objects within the bucket will become public
+
+- Click **Create Bucket**
+
+5. You are redirected to Amazon S3 with list of your buckets. Click into the name of the bucket you just created
+
+6. Find the tab **Properties** on the top of the page:
+**Static website hosting** at the bottom of the properties page: clik to edit, click enable, fill in index document: index.html and error.html for error
+
+7. On the **Permissions** tab:
+- Cross-origin resource sharing (**CORS**) Paste in the below code as configuration and save
+
+```
+[
+  {
+      "AllowedHeaders": [
+          "Authorization"
+      ],
+      "AllowedMethods": [
+          "GET"
+      ],
+      "AllowedOrigins": [
+          "*"
+      ],
+      "ExposeHeaders": []
+  }
+]
+```
+- **Bucket Policy** within permissions tab: Edit bucket policy
+Click AWS Policy Generator (top right conrner)
+
+Select type of policy: S3 Bucket policy
+Principal: * (allows all)
+Actions: Get object
+Amazon Resource Name (ARN): paste from the Edit bucket policy page in permissions
+Click Add statement Than Click Generate Policy and Copy the policy into bucket policy editor. 
+In the policy code find "Resource" key and add "/*" after the name of the bucket to enable all
+Save changes
+
+- **Access control list (ACL)** within permissions tab: click Edit
+
+find Everyone (public access) and check List box and save
+
+8. Identity and Access Management (IAM)
+Go back to the AWS Management Console and find IAM in AWS Services
+
+- side menu - User Groups and click **Create Group**
+name group "manage-your-app-name" and click Create group
+
+- side menu - Policies and click **Create Policy**
+Click import managed policy - find AmazonS3FullAccess
+Copy ARN again and paste into "Resource" add list containint two elements "[ "arn::..", ""arn::../*]" First element is for bucket itself, second element is for all files and foldrs in the bucket
+
+Click bottom right Add Tags, than Click bottom right Next: Review
+Add name of the policy and description
+
+Click bottom right Create policy
+
+9. Attach policy to the group we created:
+- go to User Groups on side menu
+- select your group from the list
+- go to permissions tab and add permissions drop down and choose **Attach policies**
+- find the policy created above and click button in bottom right Add permissions
+
+10. Create User to go in the group
+- **Users** in the side menu and click add users
+
+User name: your-app-staticfiles-user
+Check option: Access key - Programmatic access
+Click button at the bottom right for Next
+- Add user group and add user to the group you created earlier
+Click Next Tags and Next: review and Create user
+- Download .csv file
+
+
+11. Connect django to AWS S3 bucket
+- install boto3
+- install django-storages
+- freeze to requirements.txt
+- add storages to installed apps in settings.py
+
+```
+if 'USE_AWS' in os.environ:
+    # Cache control
+    AWS_S3_OBJECT_PARAMETERS = {
+        'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+        'CacheControl': 'max-age=94608000',
+    }
+
+    # Bucket Config
+    AWS_STORAGE_BUCKET_NAME = os.getenv('AWS_STORAGE_BUCKET_NAME')
+    AWS_S3_REGION_NAME = 'eu-west-2'
+    AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY')
+    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+```
+
+12. Go to heroku to set up enviromental variables
+
+open CSV file downloaded earlier and copy each variable into heroku Settings
+
+AWS_STORAGE_BUCKET_NAME
+AWS_ACCESS_KEY_ID from csv
+AWS_SECRET_ACCESS_KEY from csv
+USE_AWS = True
+remove DISABLE_COLLECTSTATIC variable from heroku
+
+13. Create file in root directory custom_storages.py
+
+```
+from django.conf import settings
+from storages.backends.s3boto3 import S3Boto3Storage
+
+
+class StaticStorage(S3Boto3Storage):
+    location = settings.STATICFILES_LOCATION
+
+
+class MediaStorage(S3Boto3Storage):
+    location = settings.MEDIAFILES_LOCATION
+```
+
+14. Go to settings.py, add the AWS settings
+
+```
+    # Static and media files
+    STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+    STATICFILES_LOCATION = 'static'
+    DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+    MEDIAFILES_LOCATION = 'media'
+
+    # Override static and media URLs in production
+    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+
+```
+
+15. To load the media files to S3 bucket
+
+- Go to your S3 bucket page on AWS. Create new folder "media"
+- go to the media folder and click Upload
+
 
 ## Credit
 ### Content
