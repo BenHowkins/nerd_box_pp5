@@ -61,6 +61,10 @@ The project can be viewed here: [Nerd Box](http://nerd-box-cc697c19580a.herokuap
     - [Feature Testing](#feature-testing)
     - [Bugs](#bugs)
 8. [Deployment](#deployment)
+    - [Creating A Heroku App](#creating-a-heroku-app)
+    - [Connecting Heroku To Github](#connecting-heroku-to-github)
+    - [Set Up Amazon AWS S3 Bucket](#set-up-amazon-aws-s3-bucket)
+    - [Add Stripe Config Vars And Webhooks](#add-stripe-config-vars-and-webhooks)
 9. [Credit](#credit)
     - [Content](#content)
     - [Code](#code)
@@ -126,12 +130,12 @@ The website was designed to have a bright but not too overpowering feel to it. T
 
 This project was planned and implemented with agile methodology and principles. This was managed and documented on GitHub Projects.
 
-The GitHub project can be viewed here: [Nerd Box](https://github.com/users/BenHowkins/projects/10)
+The GitHub project can be viewed here: [Nerd Box](https://github.com/users/BenHowkins/projects/12)
 
 The EPICS were defined using the GitHub Milestones feature and each User Story was given one of the following milestones:
 - Product, Search and Selection: A feature of the project that is used in searching for and selecting products
 - Purchasing and Payment: A feature of the project that is used in the purchasing and payment process
-- Account Management: A feature of the project that is part of the project's account management functionality
+- Account Management & Features: A feature of the project that is part of the project's account management and account features
 - Site Admin: A function of the project that is part of the site's administrative uses
 
 User Stories contained a list of Acceptance Criteria and Tasks to support the development of the project.
@@ -654,223 +658,89 @@ The following manual tests were carried out:
 ## Deployment
 The program was developed in Gitpod. It was then committed and pushed to GitHub periodically.
 
-### Deployment to Heroku
-#### In your app 
-1. add the list of requirements by writing in the terminal "pip3 freeze --local > requirements.txt"
-2. Git add and git commit the changes made
+### Creating A Heroku App
+- Login to [Heroku](https://id.heroku.com/login) or create an account.
+- On Heroku dashboard, click 'Create New App', enter a name and choose your region. Click 'Create App'
+- Click the 'Resources' tab.
+- In the Add-ons search bar enter 'Postgres' and select 'Heroku Postgres' from the list, click the 'Submit Order Form' button on the pop-up dialog.
+- Then go to 'Settings', scroll down to 'Reveal Config Vars'.
+- Add a confif var DISABLE_COLLECTSTATIC, value: 1.
+- Add SECRET_KEY, value: any random line of charaters and numbers.
+- Go back to Gitpod, settings.py and add:
+- if 'DATABASE_URL' in os.environ:
 
-#### Log into Heroku
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
 
-3. Log into [Heroku](https://id.heroku.com/login) or create a new account and log in
-4. top right-hand corner click "New" and choose the option Create new app, if you are a new user, the "Create new app" button will appear in the middle of the screen
-5. Write app name - it has to be unique, it cannot be the same as this app
-6. Choose Region - I am in Europe
-7. Click "Create App"
-8.  The page of your project opens
-9. Go to Resources Tab, Add-ons, search and add Heroku Postgres
-10. Choose "settings" from the menu on the top of the page
-10. Go to section "Config Vars" and click button "Reveal Config Vars"
-12. Add the below variables to the list
-    * Database URL will be added automaticaly
-    * Secret_key - is the djnago secret key can be generated [here](https://miniwebtool.com/django-secret-key-generator/)
-13. Go back to your code
-14. Procfile needs to be created in your app
-```
-web: gunicorn PROJ_NAME.wsgi
-```
-15. In settings in your app add Heroku to ALLOWED_HOSTS
-16. Add and commit the changes in your code and push to github
-17. Next go to "Deploy" in the menu bar on the top 
-18. Go to section "deployment method", choose "GitHub"
-19. New section will appear "Connect to GitHub" - Search for the repository to connect to
-20. Type your repositories name and click "search"
-21. Once Heroku finds your repository - click "connect"
-22. Scroll down to the section "Automatic Deploys"
-23. Click "Enable automatic deploys" or choose "Deploy branch" and manually deploy
-24. Click "Deploy branch"
-23. Click the button "View" once the "the app was successfully deployed" message appears
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
 
-The live link can be found [here](https://bonsai-shop.up.railway.app/).
+SECRET_KEY = os.environ.get('SECRET_KEY')
+- In your Gitpod terminal type, 'python3 manage.py migrate'.
+- Then 'python3 manage.py createsuperuser'.
+- Set DEBUG to False in settings.py.
+- Commit and push to Github.
+- Add SECRET_KEY and DATABASE_URL in env.py. 
 
-### Deployment moved to railway app
-Subsequently to Heroku removing free tiers the app was moved to Railway app and deployed there successfully. Products data was migrated to new database.
+### Connecting Heroku To Github
+- Go to Heroku and go to the 'Deploy' tab.
+- Select Github, login to Github and find repo.
+- Scroll down and choose 'Enable Automatic Deployment'
 
-### Forking the GitHub Repository
+### Set Up Amazon AWS S3 Bucket
+- Create AWS account.
+- On dashboard, go to S3 services.
+- Create a new bucket, use a similar name to your project.
+- Go to properties tab and enable static hosting, enter default values for index and error document settings.
+- Go to permissions tab and change these bucket settings:
 
-By forking the GitHub Repository you will be able to make a copy of the original repository on your own GitHub account allowing you to view and/or make changes without affecting the original repository by using the following steps:
-
-1. Log in to GitHub and locate the [GitHub Repository](repo here???)
-2. At the top of the Repository (not top of page) just above the "Settings" button on the menu, locate the "Fork" button.
-3. You should now have a copy of the original repository in your GitHub account.
-
-### Making a Local Clone
-
-1. Log in to GitHub and locate the [GitHub Repository](repo here???)
-2. Under the repository name, click "Clone or download".
-3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
-4. Open commandline interface on your computer
-5. Change the current working directory to the location where you want the cloned directory to be made.
-6. Type `git clone`, and then paste the URL you copied in Step 3.
-
-```
-$ git clone http..repo here???
-```
-
-7. Press Enter. Your local clone will be created.
-
-### Setting up your local enviroment
-
-1. Create Virtual enviroment on your computer or use gitpod built in virtual enviroment feature.
-
-2. Create env.py file. It needs to contain those 5 variables.
-
-* Database URL can be obtained from [heroku](https://dashboard.heroku.com/), add PostgreSQL as an add on when creating an app. 
-* Secret_key - is the djnago secret key can be generated [here](https://miniwebtool.com/django-secret-key-generator/). 
-* Cloudinary URL can be obtained from [cloudinary](https://cloudinary.com/) follow the steps on the website to register. 
-* Google API key can be obtained [here](https://cloud.google.com/gcp?authuser=1) you will have to register with google and create new app to get the API key. Follow the instructions on the website.
-
-```
-DEVELOPMENT
-SECRET_KEY
-
-STRIPE_PUBLIC_KEY
-STRIPE_SECRET_KEY 
-STRIPE_WH_SECRET
-
-```
-PostgreSQL and AWS keys are needed only on Heroku, not in local IDE
-
-3. Run command 
-```
-pip3 install -r requirements.txt
-```
-
-
-### Getting Stripe keys
-Go to developers tab. On side menu you will find API keys. Copy STRIPE_PUBLIC_KEY and STRIPE_SECRET_KEY.
-
-Go to Webhooks. Click Add Endpoint button in top right hand corner.
-Add endpoint URL (your local or deployed URL)
-Add all events 
-Than click add endpoint
-You should be redirected to this webhook's page. Reveal webhook sign in secret and copy to Settings and to heroku as STRIPE_WH_SECRET variable
-
-### Getting email variables from gmail
-
-
-- Log into gmail account
-- Go to Settings and than See all settings
-- Top menu go to Accounts and import
-- Find on the list Other google account settings
-- Left side menu - Security
-- Turn on two step verification: add phone number and follow instructions
-- Go back to security
-App passwords - Select Mail, Select Device - Other, Django, Copy app password.
-
-In Heroku 
-EMAIL_HOST_PASS is the password copied from above.
-EMAIL_HOST_USER is the gmail email address
-
-
-### Setting AWS bucket
-
-
-1. Go to [Amzon Web Services](https://aws.amazon.com/) page and login or register
-
-2. You should be redirected to AWS Managment Console, if not click onto AWS logo in top left corner or click Services icon and choose Console Home
-
-3. Below the header AWS Services click into All Services and find **S3** under Storage
-
-4. Create New Bucket using **Create Bucket** button in top right hand corner
-
-- **Configuration:** type in your chosen name for the bucket (preferably matching your heroku app name) and AWS Region closest to you
-
-
-- **Object ownership:** ACLs enabled, Bucket owner preffered
-
-- **Block Public Access settings:** Uncheck to allow public access, Acknowledge that the current settings will result that the objects within the bucket will become public
-
-- Click **Create Bucket**
-
-5. You are redirected to Amazon S3 with list of your buckets. Click into the name of the bucket you just created
-
-6. Find the tab **Properties** on the top of the page:
-**Static website hosting** at the bottom of the properties page: clik to edit, click enable, fill in index document: index.html and error.html for error
-
-7. On the **Permissions** tab:
-- Cross-origin resource sharing (**CORS**) Paste in the below code as configuration and save
-
-```
-[
+1. Add this to your Cross-origin resource sharing (CORS):
+  [
   {
-      "AllowedHeaders": [
-          "Authorization"
-      ],
-      "AllowedMethods": [
-          "GET"
-      ],
-      "AllowedOrigins": [
-          "*"
-      ],
-      "ExposeHeaders": []
+  "AllowedHeaders": [
+  "Authorization"
+  ],
+  "AllowedMethods": [
+  "GET"
+  ],
+  "AllowedOrigins": [
+  "*"
+  ],
+  "ExposeHeaders": []
   }
-]
-```
-- **Bucket Policy** within permissions tab: Edit bucket policy
-Click AWS Policy Generator (top right conrner)
+  ]
+  
+2. Access Control List
+  - Go to the Access Control List area
+  - Set the list objects permission for everyone under the Public Access section and check the box to confirm you want this permission setting.
 
-Select type of policy: S3 Bucket policy
-Principal: * (allows all)
-Actions: Get object
-Amazon Resource Name (ARN): paste from the Edit bucket policy page in permissions
-Click Add statement Than Click Generate Policy and Copy the policy into bucket policy editor. 
-In the policy code find "Resource" key and add "/*" after the name of the bucket to enable all
-Save changes
+3. Generate Policy
+  - Go to the bucket policy area, click on Edit and click on policy generator.  
+  - Choose S3 bucket policy from drop-down.
+  - Put * in Principal field.
+  - Select get object from Actions drop-down.
+  - Copy ARN and paste into ARN box on the policy generator page.
+  - Click Add Statement.
+  - Click Generate Policy then copy the policy into the policy editor window.
+  - Add /* to the end of the Resource key.
+  - Save.
 
-- **Access control list (ACL)** within permissions tab: click Edit
+4. Identify and Access Management (IAM)
+  - Create group
+  - Create policy, don't bother adding tags.
+  - Attach Policy, To attach the policy, on the sidebar click 'User Groups'. Select your group, go to the permissions tab, open the 'Add permissions' dropdown, and click 'Attach policies'. Select the policy and click 'Add permissions' at the bottom.
+  - Download and save the generated csv which contains the users access and secret access key.
 
-find Everyone (public access) and check List box and save
+- Go to your settings.py file in Gitpod and enter this: 
 
-8. Identity and Access Management (IAM)
-Go back to the AWS Management Console and find IAM in AWS Services
-
-- side menu - User Groups and click **Create Group**
-name group "manage-your-app-name" and click Create group
-
-- side menu - Policies and click **Create Policy**
-Click import managed policy - find AmazonS3FullAccess
-Copy ARN again and paste into "Resource" add list containint two elements "[ "arn::..", ""arn::../*]" First element is for bucket itself, second element is for all files and foldrs in the bucket
-
-Click bottom right Add Tags, than Click bottom right Next: Review
-Add name of the policy and description
-
-Click bottom right Create policy
-
-9. Attach policy to the group we created:
-- go to User Groups on side menu
-- select your group from the list
-- go to permissions tab and add permissions drop down and choose **Attach policies**
-- find the policy created above and click button in bottom right Add permissions
-
-10. Create User to go in the group
-- **Users** in the side menu and click add users
-
-User name: your-app-staticfiles-user
-Check option: Access key - Programmatic access
-Click button at the bottom right for Next
-- Add user group and add user to the group you created earlier
-Click Next Tags and Next: review and Create user
-- Download .csv file
-
-
-11. Connect django to AWS S3 bucket
-- install boto3
-- install django-storages
-- freeze to requirements.txt
-- add storages to installed apps in settings.py
-
-```
 if 'USE_AWS' in os.environ:
+
     # Cache control
     AWS_S3_OBJECT_PARAMETERS = {
         'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
@@ -878,58 +748,30 @@ if 'USE_AWS' in os.environ:
     }
 
     # Bucket Config
-    AWS_STORAGE_BUCKET_NAME = os.getenv('AWS_STORAGE_BUCKET_NAME')
-    AWS_S3_REGION_NAME = 'eu-west-2'
-    AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')
-    AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY')
+    AWS_STORAGE_BUCKET_NAME = "chem-eshop"
+    AWS_S3_REGION_NAME = "eu-west-1"
+    AWS_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID")
+    AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY")
     AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
-```
 
-12. Go to heroku to set up enviromental variables
-
-open CSV file downloaded earlier and copy each variable into heroku Settings
-
-AWS_STORAGE_BUCKET_NAME
-AWS_ACCESS_KEY_ID from csv
-AWS_SECRET_ACCESS_KEY from csv
-USE_AWS = True
-remove DISABLE_COLLECTSTATIC variable from heroku
-
-13. Create file in root directory custom_storages.py
-
-```
-from django.conf import settings
-from storages.backends.s3boto3 import S3Boto3Storage
-
-
-class StaticStorage(S3Boto3Storage):
-    location = settings.STATICFILES_LOCATION
-
-
-class MediaStorage(S3Boto3Storage):
-    location = settings.MEDIAFILES_LOCATION
-```
-
-14. Go to settings.py, add the AWS settings
-
-```
-    # Static and media files
     STATICFILES_STORAGE = 'custom_storages.StaticStorage'
     STATICFILES_LOCATION = 'static'
     DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
     MEDIAFILES_LOCATION = 'media'
 
-    # Override static and media URLs in production
     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
 
-```
+  - Go to the S3 dashboard and create a folder called media in the new bucket.  Specify grant public-read access on the folder and tick the checkbox to confirm.
+  - Add the AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY config vars to heroku using the values from the downloaded cvs.
+  - Add USE_AWS = True to the Heroku config vars.
+  - Remove DISABLE_COLLECTSTATIC from config vars.
 
-15. To load the media files to S3 bucket
-
-- Go to your S3 bucket page on AWS. Create new folder "media"
-- go to the media folder and click Upload
-
+### Add Stripe Config Vars And Webhooks
+- Create Stripe account.
+- Add STRIPE_PUBLIC_KEY and STRIPE_SECRET_KEY to the Heroku config vars, you'll find these on your Stripe developer dashboard.
+- Go to Stripe dashboard go to the Developers, Webhooks, click add endpoint, use the url of your Heroku application with '/checkout/wh/' added to the end of the url string.  Select all events.
+- When the endpoint is set up get your signing secret from the webhook add this value as a Heroku config var called STRIPE_WH_SECRET.
 
 ## Credit
 ### Content
