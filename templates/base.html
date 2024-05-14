@@ -21,6 +21,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
     {% endblock %}
@@ -56,8 +57,9 @@
     <header class="container-fluid fixed-top">
         <div id="topnav" class="row bg-color pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-                <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <img src="/media/logo.jpg" alt="logo image">
+                <a href="{% url 'home' %}" class="nav-link main-logo-link bg-white border-black">
+                    <h2 class="main-logo logo-font"><strong>Nerd Box <i class="fas fa-box"></i></strong></h2>
+                    <p class="main-logo logo-font">Release Your Inner Nerd</p>
                 </a>
             </div>
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">

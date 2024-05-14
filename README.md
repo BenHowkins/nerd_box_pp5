@@ -624,7 +624,7 @@ The following manual tests were carried out:
 | ---------- | ----------------------- | --------- |
 | Page Title | At the top of the page is a title stating this is 'Product Management' page | PASS |
 | Page Subheader | Below the 'Product Management' title is a subheader stating 'Add a Product' which lets the superuser know that this page allows them to add a product | PASS |
-| Product Information Input | Below the subheader there is six input boxes labeled: Category, SKU, Name, Description, Has Sizes and | Price and a 'Select Image' button below them | PASS |
+| Product Information Input | Below the subheader there is six input boxes labeled: Category, SKU, Name, Description, Has Sizes and Price and a 'Select Image' button below them | PASS |
 | Category Selector Input | The Category selector has a dropdown menu of all the available categories allowing the superuser to select the desired category | PASS |
 | Has Sizes Selector Input | The Has Sizes selector has a dropdown menu allowing the superuser to select if the item has sizes or not | PASS |
 | Price Input | The Price should be an input box which allows the superuser to input the desired price. The price can be changed/ input either by using the arrows at the right side of the input box or by manually inputting it into the box. The selector will also not allow the number to go below 1 or anything other than a number | PASS |
@@ -778,9 +778,8 @@ if 'USE_AWS' in os.environ:
 - All other content was written by the developer.
 
 ### Code
-- [Code Institute](https://codeinstitute.net/):
-  - Code Insitute full stack walkthrough projects were referred to when setting up the project. Elements of these projects were used and adapted to suit this project.
-- [Bootstrap5](https://getbootstrap.com/): was used to add elements including cards for the posts and the navigation bar. 
+- [Code Institute](https://codeinstitute.net/): Code Insitute Boutique Ado E-Commerce walkthrough project was referred to when setting up the project. Elements of this projects was used and adapted to suit this project.
+- [Bootstrap5](https://getbootstrap.com/): was used to add elements including the navigation bar. 
 - [Django](https://www.djangoproject.com/): documentation was referred to throughout development. 
 
 ## Acknowledgements
