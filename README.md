@@ -269,10 +269,10 @@ A full copy of the design can be found in this [PDF File](assets/readme/framewor
 
 ### Confirm Email Request Page
 - This page is displays a message stating an email has been sent to the email used in the signup page and to go and click the link on the email.<br>
-<image src="assets/readme/images/confirm_email_page.png" width="650px"></image>
+<image src="assets/readme/images/confirm_email_request_page.png" width="650px"></image>
 
 ### Confirm Email Page
-- This page is displays a .<br>
+- This page is displays a message asking the user to confirm that the email listed is for the username given, with a button to confirm this.<br>
 <image src="assets/readme/images/confirm_email_page.png" width="650px"></image>
 
 ### Login Page
