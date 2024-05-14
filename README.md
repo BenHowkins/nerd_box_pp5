@@ -31,6 +31,7 @@ The project can be viewed here: [Nerd Box](http://nerd-box-cc697c19580a.herokuap
     - [Products Page](#products-page)
     - [Product Detail Page](#product-detail-page)
     - [Register Page](#register-page)
+    - [Confirm Email Page](#confirm-email-page)
     - [Email Confirmation Page](#email-confirmation-page)
     - [Login Page](#login-page)
     - [Logout Page](#logout-page)
@@ -108,6 +109,7 @@ The project can be viewed here: [Nerd Box](http://nerd-box-cc697c19580a.herokuap
 | [24](https://github.com/BenHowkins/nerd_box_pp5/issues/24) | As an Admin I can Add Products To The Store so that There Are Always New And Different Products Available | Boxes App and Products Mantainance Page |
 | [25](https://github.com/BenHowkins/nerd_box_pp5/issues/25) | As an Admin I can Edit Existing Products so that I Can Update Products When Needed | Boxes App and Edit Products Page |
 | [26](https://github.com/BenHowkins/nerd_box_pp5/issues/26) | As an Admin I can Remove Products From The Store so that I Can Take Products That Are Unavailable For Purchase Off The Store | Boxes App and Products Page |
+| [33](https://github.com/BenHowkins/nerd_box_pp5/issues/33) | As a User I can Access The Website Publicly Through A Publicly Accessible Domain so that View And Use The Website | Deployment To Heroku |
 
 #### User stories that are planned for future updates:
 
@@ -265,6 +267,14 @@ A full copy of the design can be found in this [PDF File](assets/readme/framewor
 <image src="assets/readme/images/register_page_top.png" width="650px"></image>
 <image src="assets/readme/images/register_page_bottom.png" width="650px"></image>
 
+### Confirm Email Request Page
+- This page is displays a message stating an email has been sent to the email used in the signup page and to go and click the link on the email.<br>
+<image src="assets/readme/images/confirm_email_page.png" width="650px"></image>
+
+### Confirm Email Page
+- This page is displays a .<br>
+<image src="assets/readme/images/confirm_email_page.png" width="650px"></image>
+
 ### Login Page
 - This page displays a form which allows the user to log into their Nerd Box account.<br>
 <image src="assets/readme/images/sign_in_page_top.png" width="650px"></image>
@@ -311,6 +321,7 @@ A full copy of the design can be found in this [PDF File](assets/readme/framewor
 - At the bottom of the page is two buttons. One labelled 'Keep Shopping' which takes the user back to the products page and one labelled 'Secure Checkout' which will take the user to the checkout page.
 - On a mobile device the buttons and grand total information will be moved to the top of the page and each piece of information regard the item will be on it's own line in the same order.
 <br>
+<image src="assets/readme/images/empty_bag_page.png" width="650px"></image>
 <image src="assets/readme/images/bag_page_top.png" width="650px"></image>
 <image src="assets/readme/images/bag_page_bottom.png" width="650px"></image>
 
