@@ -629,6 +629,31 @@ The following manual tests were carried out:
 | Keep Shopping Button | At the base of the page next to the 'Secure Checkout' button is a 'Keep Shopping' button which when clicked takes the user back to the Products page | PASS |
 
 #### Checkout Page: checkout.html
+| TEST       | DESIRED RESULT          | PASS/FAIL |
+| ---------- | ----------------------- | --------- |
+| Page Title | At the top of the page is a title stating this is 'Ceckout' page | PASS |
+| Delivery Information Message | At the top of the left hand side of the page below the title is a message stating 'To Complete Your Order Please Fill Out The Form Below'  | PASS |
+| Details Subtitle | Below the message is a subheading stating that the input fields below are for the user's 'Details' | PASS |
+| Details Input Fields | Below the subtitle there is two input boxes labeled: Full Name and Email Address | PASS |
+| Auto Fill | If the user is logged in with an account then the email address linked with that account should be automatically filled in | PASS |
+| Delivery Subtitle | Below the message is a subheading stating that the input fields below are for the user's 'Delivery' information | PASS |
+| Delivery Information Input | Below the subtitle there is seven input boxes labeled: Phone Number, Street Address 1, Street Address 2, Town or City, County State or Locality, Postal Code and Country | PASS |
+| Auto Fill | If the user is logged in with an account and has previously saved any information in their 'Profile' then the information linked with that account should be automatically filled in | PASS |
+| Save Details Checkbox | If the user is logged in then a message stating 'Save this delivery information to my profile' with a checkbox should appear below the last input box and if checked should update the profile with the information entered | PASS |
+| Sign In Or Register Message | If the user isn't logged in then a message stating 'Create an account or login to save this information' with a links to the 'Log In' and 'Register' pages should appear below the last input box | PASS |
+| Payment Subtitle | Below the message is a subheading stating that the input field below are for the user's 'Payment' information | PASS |
+| Payment Information Input | Below the subtitle there is an input boxes labeled 'Card Number' | PASS |
+| Payment Information Details | The 'Card Number' input requires the user to input their cards: Number, Expiration Date, CVC Number and ZIP Number | PASS |
+| Complete Order Button | Below the payment box is an 'Complete Order' button which when clicked will conform the order, take the  payment and complete the order | PASS |
+| Adjust Bag Button | On the left hand side next to the 'Complete Order' button is a 'Adjust Bag' button which when clicked takes the user back to the 'Bag' page | PASS |
+| Required Fields | When clicking the 'Complete Order' button and either the Full Name or Email Address fields in the 'Details' section, the Phone Number, Street Address 1, Town or City or Country field in the 'Delivery' section or the 'Payment' field is empty a message will appear stating 'Please fill in this field' | PASS |
+| Order Summary Message | At the top of the right hand side of the page below the title is a message stating 'Order Summary' folloowed by a number in brackets to say how many items are being purchased | PASS |
+| Item Info | Under the subheader should be the product image with the procucts: name, size selected (if applicable) and quantity in a column next to the image | PASS |
+| Subtotal | Under the 'Subtotal' header should be the total price of the product by multiply price and quantity together | PASS |
+| Items | If the user is ordering more than one different items, each item should be on it's own row | PASS |
+| Order Total | Below the last item on the right of the screen is a header labelled 'Order Total:' with the current total of all the items in the shopping bag | PASS |
+| Delivery | Below the 'Order Total:' header is another header labelled 'Delivery:' with the current current charge for delivery | PASS |
+| Grand Total | Below the 'Delivery:' header is another header labelled 'Grand Total:' with the current total of all the items in the being purchased and delivery charge added together | PASS |
 
 #### Product Management Page: add_product.html
 | TEST       | DESIRED RESULT          | PASS/FAIL |
