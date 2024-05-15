@@ -689,10 +689,11 @@ The following manual tests were carried out:
 1. Upon deployment to [Heroku](https://id.heroku.com/login) it was discovered that the image used for the logo would not transfer across from the local host server to final deployed site. After checking the code and reuploading to image to [Amazon Web Server](https://aws.amazon.com/) it was decided to remove the image as the logo and instead have a text logo with a [Font Awesome](https://fontawesome.com/) icon instead.
 
 #### Unresolved Bugs
-- Through testing and validations I don't believe that there is any unresolved bugs on the site.
+- The footer on the 'Profile' page doesn't spread the length of the page. Through testing and editing the CSS and code for the page I couldn't find a way of correcting this issue. I made the choice to keep it in as though it doesn't look the most appealing it doesn't have any negative impact on the page.
 
 ## Deployment
-The program was developed in Gitpod. It was then committed and pushed to GitHub periodically.
+The website was developed in Gitpod. It was then committed and pushed to GitHub periodically.
+Below are the steps that was carried out for each key element of deployment
 
 ### Creating A Heroku App
 - Login to [Heroku](https://id.heroku.com/login) or create an account.
