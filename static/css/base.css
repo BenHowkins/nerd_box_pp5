@@ -23,7 +23,8 @@ body {
     text-transform: uppercase;
 }
 
-.main-logo-link {
+.main-logo-link,
+.main-logo-link:hover {
     width: fit-content;
     color: #F35B53;
     font-family: "Jaro", sans-serif;

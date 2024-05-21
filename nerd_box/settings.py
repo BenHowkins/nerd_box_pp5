@@ -37,7 +37,7 @@ CSRF_TRUSTED_ORIGINS = [
     ]
 
 ALLOWED_HOSTS = [
-    "8000-benhowkins-nerdboxpp5-nvxkw2rf1yg.ws-eu111.gitpod.io",
+    "8000-benhowkins-nerdboxpp5-nvxkw2rf1yg.ws-eu114.gitpod.io",
     "nerd-box-cc697c19580a.herokuapp.com",
     "localhost",
 ]

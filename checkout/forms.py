@@ -10,7 +10,6 @@ class OrderForm(forms.ModelForm):
             "email",
             "phone_number",
             "street_address1",
-            "street_address2",
             "town_or_city",
             "postcode",
             "country",
@@ -26,11 +25,11 @@ class OrderForm(forms.ModelForm):
         placeholders = {
             "full_name": "Full Name",
             "email": "Email Address",
+            "date_of_birth": "Date Of Birth",
             "phone_number": "Phone Number",
             "postcode": "Postal Code",
             "town_or_city": "Town or City",
             "street_address1": "Street Address 1",
-            "street_address2": "Street Address 2",
             "county": "County, State or Locality",
         }
 
