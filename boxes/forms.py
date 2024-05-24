@@ -1,12 +1,18 @@
 from django import forms
 from .widgets import CustomClearableFileInput
 from .models import Product, Category
+from decimal import Decimal
 
 
 class ProductForm(forms.ModelForm):
     class Meta:
         model = Product
         fields = "__all__"
+
+    price = forms.DecimalField(
+        min_value=Decimal('0.20'), max_value=Decimal('315.00'),
+        max_digits=6, decimal_places=2
+    )
 
     image = forms.ImageField(
         label="Image", required=False, widget=CustomClearableFileInput

@@ -91,6 +91,9 @@ class OrderLineItem(models.Model):
     product_size = models.CharField(
         max_length=2, null=True, blank=True
     )  # XS, S, M, L, XL
+    product_color = models.CharField(
+        max_length=6, null=True, blank=True
+    )  # Black, Blue, Green, Red, Random
     quantity = models.IntegerField(null=False, blank=False, default=0)
     lineitem_total = models.DecimalField(
         max_digits=6, decimal_places=2, null=False, blank=False, editable=False

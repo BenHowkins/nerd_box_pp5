@@ -686,7 +686,8 @@ The following manual tests were carried out:
 
 ### Bugs
 #### Resolved Bugs
-1. Upon deployment to [Heroku](https://id.heroku.com/login) it was discovered that the image used for the logo would not transfer across from the local host server to final deployed site. After checking the code and reuploading to image to [Amazon Web Server](https://aws.amazon.com/) it was decided to remove the image as the logo and instead have a text logo with a [Font Awesome](https://fontawesome.com/) icon instead.
+- Upon deployment to [Heroku](https://id.heroku.com/login) it was discovered that the image used for the logo would not transfer across from the local host server to final deployed site. After checking the code and reuploading the image to [Amazon Web Server](https://aws.amazon.com/) it was decided to remove the image as the logo and instead have a text logo with a [Font Awesome](https://fontawesome.com/) icon instead.
+- It was discovered that in the 'Product Management' and 'Edit Product' pages it was possible to set the item price to a negative value. This issue was resolved by adding a validator to the form.py file in the boxes app. The validator stops the price being set below $0.20 and above $315.00
 
 #### Unresolved Bugs
 - The footer on the 'Profile' page doesn't spread the length of the page. Through testing and editing the CSS and code for the page I couldn't find a way of correcting this issue. I made the choice to keep it in as though it doesn't look the most appealing it doesn't have any negative impact on the page.
