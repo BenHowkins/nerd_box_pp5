@@ -23,7 +23,6 @@ The project can be viewed here: [Nerd Box](http://nerd-box-cc697c19580a.herokuap
     - [Colour Scheme](#colour-scheme)
 2. [Planning](#planning)
     - [Methodology](#methodology)
-    - [Models](#models)
     - [Frameworks](#frameworks)
 3. [Features](#features)
     - [General](#general)
@@ -146,19 +145,6 @@ Following MoSCoW Priortisation principles, each User Story was assigned a tag fr
 - Should Have
 - Could Have
 - Won't Have
-
-### Models
-The project uses five created models consisting of two main models: Post and Comment and three submodels: Categories, Opinions and Choices. It also uses the Django allauth User model.
-1. The Post model stores the blog post data:
-- author is a foreign key connecting to the User model.
-- category is a foreign key connecting to the Categories model.
-- opinion is a foreign key connecting to the Opinions model.
-2. The Comment model stores the data regarding comments made on the blog posts:
-- post is a foreign key connecting to the Post model.
-- choice is a foreign key connecting to the Choices model.
-
-The  entity relationship diagram below was created using [dbdigram](https://dbdiagram.io/home) and demonstrates the relationship between the models. <br>
-<image src="assets/readme/fst_project_diagram.png" width="650px"></image>
 
 ### Frameworks
 The basic layout of each page was planned using the framework tool [Balsamiq](https://balsamiq.cloud/sn6w1jb/projects). This allowed for there to be a basic idea and plan sor each page. There may be slight changes between the framework and the final page.
