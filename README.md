@@ -167,6 +167,14 @@ A full copy of the design can be found in this [PDF File](assets/readme/framewor
 <br>
 <image src="assets/readme/framework/register_page.png" width="650px"></image>
 
+### Confirm Email Request Page
+<br>
+<image src="assets/readme/framework/confirm_email_request_page.png" width="650px"></image>
+
+### Confirm Email Page
+<br>
+<image src="assets/readme/framework/confirm_email_page.png" width="650px"></image>
+
 ### Login Page
 <br>
 <image src="assets/readme/framework/log_in_page.png" width="650px"></image>
@@ -243,6 +251,7 @@ A full copy of the design can be found in this [PDF File](assets/readme/framewor
     - The product's category is below that
     - A decription of the product is below that
     - The quantity of the product selected for purchase is below that
+    - If the product has the option for them then the will be a size and color select found on the next two line
     - Two buttons, one labelled 'Keep Shoping' which when push takes you back to the products page, the other labbeled 'Add To Bag' which adds the quantity of this product selected to the bag are next toeach other at the bottom of this column.
 - On a mobile device the each element is on a row of it's own with the exception of the buttons which are still side to side.<br>
 <image src="assets/readme/images/product_detail_page_top.png" width="650px"></image><br>
@@ -276,11 +285,11 @@ A full copy of the design can be found in this [PDF File](assets/readme/framewor
 - This information includes:
   - The user's phone number (which is required)
   - The first line of the user's address (which is required)
-  - The second line of the user's address (if available)
   - The user's town or city (which is required)
   - The user's county, state or locality (if available)
   - The user's post/ zip code (which is required)
   - The user's country they live in (which is required)
+  - The user's date of birth (if available)
 - There is also a button below the input boxes to save the input information and update their delivery information
 - The right hand side show the information of any past orders the user has made.
 - This information includes: 
@@ -299,7 +308,7 @@ A full copy of the design can be found in this [PDF File](assets/readme/framewor
 - If there is products in the bag then each product and relivant information will be displayed on it's own row.
 - This information include:
   - The product image
-  - The product name, size (if applicable) and sku number in a single colum in that order.
+  - The product name, size (if applicable), color (if applicable) and sku number in a single column in that order.
   - The price of the item
   - The quantity in an input box with two buttons, an 'Update' button which will update the quantity in the bag to whatever is in the quantity input box and a 'Remove' button which removes that item from the bag.
   - The subtotal of this product
@@ -319,7 +328,6 @@ A full copy of the design can be found in this [PDF File](assets/readme/framewor
   - The customer's email address (which is required)
   - The customer's phone number (which is required)
   - The first line of the customer's address (which is required)
-  - The second line of the customer's address (if available)
   - The customer's town or city (which is required)
   - The customer's county, state or locality (if available)
   - The customer's post/ zip code (which is required)
@@ -353,12 +361,14 @@ A full copy of the design can be found in this [PDF File](assets/readme/framewor
   - The item's name (which is required)
   - A description of the item (which is required)
   - A selection box to select if the product has sizes or not (which is opional)
+  - A selection box to select if the product has colors or not (which is opional)
   - The item's price (which is required)
   - A button to select an image for the product (which is optional)
 - Below this is two buttons, one button labelled 'Cancel' which cancels the new item and takes them back to the products page and one button labelled 'Add Product' which will confirm the new product and add it to the store.
 - On a mobile device the page is no different.
 <br>
 <image src="assets/readme/images/product_management_page_top.png" width="650px"></image>
+<image src="assets/readme/images/product_management_page_second_section.png" width="650px"></image>
 <image src="assets/readme/images/product_management_page_bottom.png" width="650px"></image>
 
 ### Edit Product Page
@@ -545,6 +555,7 @@ The following manual tests were carried out:
 | Edit Link | Clicking the link will take the superuser to the edit poduct page | PASS |
 | Delete Link | Clicking the link will delete the product from the store | PASS |
 | Size Sector | If the product has the option of sizes then there should be a selector which allowing the user to select their desired size from: XS, S, M, L and XL | PASS |
+| Color Sector | If the product has the option of colors then there should be a selector which allowing the user to select their desired color from: Black, Blue, Green, Red and Random | PASS |
 | Quantity Selector | There should be a selector which allowing the user to select their desired quantity | PASS |
 | Quantity Selector Input | The quantity can be changed/ input either by using the arrows at the right side of the input box or by manually inputting it into the box. The selector will also not allow the number to go above 99 and below 1 or anything other than a number | PASS |
 | Add To Bag Button | At the base of the page is an 'Add To Bag' button which when clicked will add the current product and quantity selected to the bag. A message will appear at the top of the page stating the product has been added to the bag | PASS |
@@ -587,7 +598,7 @@ The following manual tests were carried out:
 | ---------- | ----------------------- | --------- |
 | Page Title | At the top of the page is a title stating this is My Profile page | PASS |
 | Delivery Information Title | At the top of the left hand side of the page below the title is a subheading stating that the below information is the Default Delivery Information | PASS |
-| Delivery Information Input | Below the title there is seven input boxes labeled: Phone Number, Street Address 1, Street Address 2, Town or City, County State or Locality, Postal Code and Country | PASS |
+| Delivery Information Input | Below the title there is seven input boxes labeled: Phone Number, Street Address 1, Town or City, County State or Locality, Postal Code, Country and Date Of Birth | PASS |
 | Update Information Button | Below the input boxes is an 'Update Information' button which when clicked will save the current information to the profile with a message stating that the information has been saved | PASS |
 | Order History Title | At the top of the right hand side of the page below the title is a subheading stating that the below information is the Order History Information | PASS |
 | Order History Headers | Below the Order History subtitle are four column with the headers: Order Number, Date, Items and Order Total | PASS |
@@ -623,7 +634,7 @@ The following manual tests were carried out:
 | Details Input Fields | Below the subtitle there is two input boxes labeled: Full Name and Email Address | PASS |
 | Auto Fill | If the user is logged in with an account then the email address linked with that account should be automatically filled in | PASS |
 | Delivery Subtitle | Below the message is a subheading stating that the input fields below are for the user's 'Delivery' information | PASS |
-| Delivery Information Input | Below the subtitle there is seven input boxes labeled: Phone Number, Street Address 1, Street Address 2, Town or City, County State or Locality, Postal Code and Country | PASS |
+| Delivery Information Input | Below the subtitle there is seven input boxes labeled: Phone Number, Street Address 1, Town or City, County State or Locality, Postal Code and Country | PASS |
 | Auto Fill | If the user is logged in with an account and has previously saved any information in their 'Profile' then the information linked with that account should be automatically filled in | PASS |
 | Save Details Checkbox | If the user is logged in then a message stating 'Save this delivery information to my profile' with a checkbox should appear below the last input box and if checked should update the profile with the information entered | PASS |
 | Sign In Or Register Message | If the user isn't logged in then a message stating 'Create an account or login to save this information' with a links to the 'Log In' and 'Register' pages should appear below the last input box | PASS |
@@ -646,10 +657,11 @@ The following manual tests were carried out:
 | ---------- | ----------------------- | --------- |
 | Page Title | At the top of the page is a title stating this is 'Product Management' page | PASS |
 | Page Subheader | Below the 'Product Management' title is a subheader stating 'Add a Product' which lets the superuser know that this page allows them to add a product | PASS |
-| Product Information Input | Below the subheader there is six input boxes labeled: Category, SKU, Name, Description, Has Sizes and Price and a 'Select Image' button below them | PASS |
+| Product Information Input | Below the subheader there is seven input boxes labeled: Category, SKU, Name, Description, Has Sizes, Has Colors and Price and a 'Select Image' button below them | PASS |
 | Category Selector Input | The Category selector has a dropdown menu of all the available categories allowing the superuser to select the desired category | PASS |
-| Has Sizes Selector Input | The Has Sizes selector has a dropdown menu allowing the superuser to select if the item has sizes or not | PASS |
-| Price Input | The Price should be an input box which allows the superuser to input the desired price. The price can be changed/ input either by using the arrows at the right side of the input box or by manually inputting it into the box. The selector will also not allow the number to go below 1 or anything other than a number | PASS |
+| Has Sizes Selector Input | The 'Has Sizes' selector has a dropdown menu allowing the superuser to select if the item has sizes or not | PASS |
+| Has Colors Selector Input | The 'Has Colors' selector has a dropdown menu allowing the superuser to select if the item has colors or not | PASS |
+| Price Input | The Price should be an input box which allows the superuser to input the desired price. The price can be changed/ input either by using the arrows at the right side of the input box or by manually inputting it into the box. The selector will also not allow the number to go below 0.20 or anything other than a number | PASS |
 | Select Image Button | The 'Select Image' button will open up the superuser's image folder to allow them to select the image for the product | PASS |
 | Add Product Button | At the base of the page is a 'Add Product' button which when clicked will confirm the information added, add product to the store and redirect the superuser to the 'Product Detail' page for the added product | PASS |
 | Required Fields | When clicking the 'Add Product' button and either the Name, Description or Price field is empty a message will appear stating 'Please fill in this field' | PASS |
@@ -662,8 +674,9 @@ The following manual tests were carried out:
 | Page Subheader | Below the 'Product Management' title is a subheader stating 'Edit a Product' which lets the superuser know that this page allows them to edit a product | PASS |
 | Product Information Input | Below the subheader there is six input boxes labeled: Category, SKU, Name, Description, Has Sizes and Price each being prefilled with the current information for the product. There is also the current image for the product with a checkbox labelled 'Remove' as well as the 'Select Image' button below them. | PASS |
 | Category Selector Input | The Category selector has a dropdown menu of all the available categories allowing the superuser to select the desired category | PASS |
-| Has Sizes Selector Input | The Has Sizes selector has a dropdown menu allowing the superuser to select if the item has sizes or not | PASS |
-| Price Input | The Price should be an input box which allows the superuser to input the desired price. The price can be changed/ input either by using the arrows at the right side of the input box or by manually inputting it into the box. The selector will also not allow the number to go below 1 or anything other than a number | PASS |
+| Has Sizes Selector Input | The 'Has Sizes' selector has a dropdown menu allowing the superuser to select if the item has sizes or not | PASS |
+| Has Colors Selector Input | The 'Has Colors' selector has a dropdown menu allowing the superuser to select if the item has colors or not | PASS |
+| Price Input | The Price should be an input box which allows the superuser to input the desired price. The price can be changed/ input either by using the arrows at the right side of the input box or by manually inputting it into the box. The selector will also not allow the number to go below 0.20 or anything other than a number | PASS |
 | Select Image Button | The 'Select Image' button will open up the superuser's image folder to allow them to select a new image for the product | PASS |
 | Update Product Button | At the base of the page is a 'Update Product' button which when clicked will confirm the information added, edit product's details in the store and redirect the superuser to the 'Product Detail' page for the edited product | PASS |
 | Required Fields | When clicking the 'Update Product' button and either the Name, Description or Price field is empty a message will appear stating 'Please fill in this field' | PASS |
